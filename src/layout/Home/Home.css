@@ -11,4 +11,29 @@
 .icocolum{
     text-align: center;
     height: 300px;
+    width: 95%;
+}
+.colheart {
+    height : 200px;
+    width: 200px;
+    padding: 25px;
+    margin: 10px;
+}
+.colclock {
+    height : 200px;
+    width: 200px; 
+    padding: 25px;
+    margin: 10px;
+}
+.colhamburger {
+    height : 200px;
+    width: 200px;
+    padding: 25px;
+    margin: 10px;
+}
+.colusers {
+    height : 200px;
+    width: 200px;
+    padding: 25px;
+    margin: 10px;
 }
