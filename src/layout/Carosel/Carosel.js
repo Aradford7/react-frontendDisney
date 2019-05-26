@@ -6,9 +6,11 @@ import Carousel from 'react-bootstrap/Carousel'
 export const Carosel= () =>(
     <div>
        <Carousel>
-  <Carousel.Item>
+  <Carousel.Item >
     <img
       className="d-block w-100"
+      width = "839 px"
+      height = "618px"
       src="https://secure.cdn1.wdpromedia.com/resize/mwImage/1/640/360/75/dam/wdpro-assets/dlr/gallery/destinations/disneyland-park/disneyland-gallery00.jpg"
       alt="First slide"
     />
@@ -29,9 +31,11 @@ export const Carosel= () =>(
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </Carousel.Caption>
   </Carousel.Item>
-  <Carousel.Item>
+  <Carousel.Item >
     <img
       className="d-block w-100"
+      width = "839 px"
+      height = "618px"
       src="https://i.ytimg.com/vi/Gu7a6et4a-U/maxresdefault.jpg"
       alt="Third slide"
     />
