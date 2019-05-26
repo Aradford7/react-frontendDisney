@@ -1,5 +1,14 @@
-h2{
-    width: 600px;
+.container{
+    text-align: center;
     font-family: 'Maven Pro', sans-serif;
 }
 
+.hero{
+    background-color: dodgerblue;
+    height: 250px;
+}
+
+.icocolum{
+    text-align: center;
+    height: 300px;
+}
