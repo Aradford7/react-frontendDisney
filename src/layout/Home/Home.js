@@ -15,7 +15,7 @@ export const Home = () =>(
         <Carosel/>
         <div class = "container" >
         <br/>
-        <h2>Attraction Reccommendations</h2><br/>
+        <h2 class = "title">Attraction Reccommendations</h2><br/>
         <p>We love Amusement Parks, and we love helping families make the most of their visit to the parks. So, We created a Amusement Park Planner to help your family answer the most common questions...<br/> <br/> where to eat? or  what ride next?<br/> <br/>
         We created a site where you can login and create a park planner by adding rides and resturants from the park so you can plan out your day and make most of your trip by sharing this with other family members.</p>
         </div>
