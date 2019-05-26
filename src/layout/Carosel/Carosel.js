@@ -1,6 +1,7 @@
 import React from 'react';
 import './Carosel.css'
 import Carousel from 'react-bootstrap/Carousel'
+import Button from 'react-bootstrap/Button'
 
 
 export const Carosel= () =>(
@@ -15,8 +16,9 @@ export const Carosel= () =>(
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <h3>YOUR PERSONAL PLANNER TO SOUTHERN CALIFORNIA AMUSEMENT PARKS</h3>
+      <p>Make magical memories with your friends and family</p>
+      <Button class = "btn" variant="primary" href="/login" type="submit">Ok, Let's Go!</Button>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -27,8 +29,9 @@ export const Carosel= () =>(
     />
 
     <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+     <h3>YOUR PERSONAL PLANNER TO SOUTHERN CALIFORNIA AMUSEMENT PARKS</h3>
+      <p>Make magical memories with your friends and family</p>
+      <Button class = "btn" variant="primary" href="/login" type="submit">Ok, Let's Go!</Button>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item >
@@ -41,8 +44,9 @@ export const Carosel= () =>(
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <h3>YOUR PERSONAL PLANNER TO SOUTHERN CALIFORNIA AMUSEMENT PARKS</h3>
+      <p>Make magical memories with your friends and family</p>
+      <Button class = "btn" variant="primary" href="/login" type="submit">Ok, Let's Go!</Button>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>

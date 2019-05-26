@@ -1,6 +1,8 @@
 import React from 'react'
-import NavBar from './NavBar/NavBar'
-import Carosel from './Carosel/Carosel'
+import NavBar from '../../layout/NavBar/NavBar'
+import Carosel from '../../layout/Carosel/Carosel'
+import './Home.css'
+
 
 export const Home = () =>(
     <div>
