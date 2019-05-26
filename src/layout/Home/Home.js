@@ -68,7 +68,7 @@ export const Home = () =>(
             <Row>
               <Col lg={true}>large hero place icons and stuff here for prettiness</Col>
             </Row>
-        </Container>;
+        </Container>
         </div>
         <div>
         <Footer/>
