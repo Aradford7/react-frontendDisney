@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from '../../layout/NavBar/NavBar'
 import Carosel from '../../layout/Carosel/Carosel'
+import Footer from '../../layout/Footer/Footer'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -61,6 +62,16 @@ export const Home = () =>(
               <Col lg={true}>large hero place icons and stuff here for prettiness</Col>
             </Row>
         </Container>;
+        </div>
+        <div>
+        <Container>
+            <Row>
+              <Col lg={true}>large hero place icons and stuff here for prettiness</Col>
+            </Row>
+        </Container>;
+        </div>
+        <div>
+        <Footer/>
         </div>
     </div>
 )
