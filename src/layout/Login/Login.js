@@ -12,9 +12,9 @@ export const Login = () =>(
     <div>
     <NavBar/>
     <div class = "container">
-        <br/>
-        <h2>Log in</h2>
-        <h3>Use your email and password to log in.</h3>
+            <br/>
+            <h2>Log in</h2>
+            <h3>Use your email and password to log in.</h3>
        <Form>
             <Form.Group controlId="formBasicUsername">
                 <Form.Label>Username</Form.Label>
