@@ -1,4 +1,7 @@
 import React from 'react';
+
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import './Footer.css'
 
 
@@ -56,16 +59,17 @@ export const Footer= () =>(
               </li>
             </ul>
           </div>
-          {/* <!-- Grid column --> */}
         </div>
-        {/* <!-- Grid row --> */}
+      
       </div>
-      {/* <!-- Footer Links -->
-      <!-- Copyright --> */}
-      <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-      </div>
-      {/* <!-- Copyright --> */}
+            <Row className = "footerrow" >
+              <Col lg={true}>
+                  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                        <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+                    </div>
+            </Col>
+            </Row>
+   
     </footer>
  
 )

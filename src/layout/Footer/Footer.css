@@ -1,12 +1,14 @@
-/* footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-} */
 
 footer{
-    background-color: purple;
-    color: green;
+    background-color: dodgerblue;
+    color: white;
+}
+a{
+    color: darkslategrey
+}
+.footerrow{
+    background-color: darkblue;
+    width: auto;
+    opacity: .4;
+    
 }

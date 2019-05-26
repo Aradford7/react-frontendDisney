@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Home} from './layout/Home/Home'
 import {About} from './layout/About'
-import {Contact} from './layout/Contact'
+import {Contact} from './layout/Contact/Contact'
 import {Login} from './layout/Login/Login'
 import {Register} from './layout/Register/Register'
 import {Logout} from './layout/Logout'
@@ -12,7 +12,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 ////////STYLING STUFF//////////
 import './App.css';
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faHamburger} from '@fortawesome/free-solid-svg-icons'
 import {faHeart} from '@fortawesome/free-solid-svg-icons'
 import {faClock} from '@fortawesome/free-solid-svg-icons'
