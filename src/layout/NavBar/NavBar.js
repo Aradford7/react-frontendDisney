@@ -11,16 +11,18 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup'
 
 import logo from '../../logo.svg';
 import './NavBar.css'
+
+
 const NavBar = () =>
 <div>
-<Navbar bg="light" variant="light">
+<Navbar bg="light" variant="light" class = "navbar">
     <Navbar.Brand href="/"> <img
         alt=""
         src= {logo}
         width="30"
         height="30"
         className="d-inline-block align-top"
-      /><span>{' MY THEMEPARK VISIT'}</span></Navbar.Brand>
+      /><span>{' MY PARK PLANNER'}</span></Navbar.Brand>
     <Nav className="mr-auto">
         <NavLink exact to = {routes.HOME}><Nav.Link href="/"></Nav.Link></NavLink>
     </Nav>

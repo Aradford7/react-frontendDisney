@@ -1,16 +1,18 @@
 import React from 'react'
-import NavBar from './NavBar/NavBar'
+import NavBar from '../NavBar/NavBar'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import Alert from 'react-bootstrap/Alert'
 
-
+import './Login.css'
 
 
 export const Login = () =>(
     <div>
     <NavBar/>
     <div class = "container">
+        <br/>
         <h2>Log in</h2>
         <h3>Use your email and password to log in.</h3>
        <Form>
@@ -27,13 +29,16 @@ export const Login = () =>(
                 <Form.Control type="password" placeholder="Password" />
             </Form.Group>
             <Form.Group controlId="formBasicChecbox">
-                <Form.Check type="checkbox" label="Check me out" />
+                <Form.Check type="checkbox" label="Save Password" />
             </Form.Group>
-                <Button variant="primary" type="submit">
-                Submit
-                </Button>
+            <Alert variant="light">
+                <Alert.Link href="/register">Don't have an account yet? Register now. </Alert.Link>
+            </Alert>
+                <Button variant="primary" type="submit">Sign In</Button>
         </Form>
 
+        
+        
     </div>
 </div>
 )
