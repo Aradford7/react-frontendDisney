@@ -15,9 +15,9 @@ export const Login = () =>(
             <br/>
             <h2>Log in</h2>
             <h3>Use your email and password to log in.</h3>
-       <Form>
+       <Form className = "formcontainer">
             <Form.Group controlId="formBasicUsername">
-                <Form.Label>Username</Form.Label>
+               <Form.Label>Username</Form.Label>
                 <Form.Control type="username" placeholder="Enter Username" />
                 <Form.Text className="text-muted">
                  Please enter your Username or Email.
@@ -34,7 +34,7 @@ export const Login = () =>(
             <Alert variant="light">
                 <Alert.Link href="/register">Don't have an account yet? Register now. </Alert.Link>
             </Alert>
-                <Button variant="primary" type="submit">Sign In</Button>
+                <Button variant="primary" type="submit" href ="/itinerary">Sign In</Button>
         </Form>
 
         

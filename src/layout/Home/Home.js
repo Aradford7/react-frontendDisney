@@ -3,6 +3,7 @@ import NavBar from '../../layout/NavBar/NavBar'
 import Carosel from '../../layout/Carosel/Carosel'
 import Footer from '../../layout/Footer/Footer'
 import Container from 'react-bootstrap/Container'
+import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
@@ -66,35 +67,38 @@ export const Home = () =>(
         </div>
 
     <div class = "pics">
-      
-            <Row>
-              <Col lg={true}>
-                <Row>
-                     <Col aria-label="first group" md={4}>
+                <Row lg = {true}>
+                     <Col md={4} aria-label="first group">
+                     <Card style={{ width: '25rem' }}>
                          <Image  
                             width = "400px"
                             height = "300px"
                             src="https://cdn.ventrata.com/image/upload/ar_1.5,c_fill,dpr_3.0,f_jpg,w_400/v1506370830/vimwsuqqtctakrxba5r6.jpg" rounded/>
-  
+
+                                <Card.Body><a href = "https://disneyland.disney.go.com/">Disneyland - Anaheim, CA</a></Card.Body>
+                            </Card>
                     </Col>
 
                     <Col md={4} aria-label="second group">
+                    <Card style={{ width: '25rem' }}>
                         <Image 
                             width = "400px"
                             height = "300px"
                             src="https://www.discoverlosangeles.com/sites/default/files/styles/hero/public/images/2019-01/USH_Tour_Yuri%201.jpg" rounded  />
-    
+                                <Card.Body><a href = "https://www.universalstudioshollywood.com/">Universal Studios Hollywood -Universal City, CA</a></Card.Body>
+                            </Card>
                     </Col>
 
                     <Col md= {4} aria-label="third group">
+                    <Card  style={{ width: '25rem' }}> 
                         <Image  
                             width = "400px"
                             height = "300px"
                             src="https://secure.cdn1.wdpromedia.com/resize/mwImage/1/640/360/75/dam/wdpro-assets/dlr/gallery/destinations/california-adventure-park/disney-california-adventure-gallery00.jpg" rounded />
+                                <Card.Body><a href = "https://disneyland.disney.go.com/en-ca/destinations/disney-california-adventure/">Disney California Adventure - Anaheim, CA</a></Card.Body>
+                        </Card>
                     </Col>
                 </Row>
-              </Col>
-            </Row>
        
         </div>
 

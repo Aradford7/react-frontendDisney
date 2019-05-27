@@ -13,7 +13,7 @@ export const Register = () =>(
         <br/>
         <h2>Register</h2>
         <h3>Create a new account.</h3>
-       <Form>
+       <Form className="formcontainer">
             <Form.Group controlId="formBasicUsername">
                 <Form.Label>Create A Username</Form.Label>
                 <Form.Control type="username" placeholder="Enter Username" />
@@ -26,7 +26,7 @@ export const Register = () =>(
                 <Form.Label>Email</Form.Label>
                 <Form.Control type="username" placeholder="Enter Email" />
                 <Form.Text className="text-muted">
-                 Email is required.
+                We'll never share your email with anyone else.
                 </Form.Text>
             </Form.Group>
 
