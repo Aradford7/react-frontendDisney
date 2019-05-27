@@ -5,6 +5,7 @@ import Footer from '../../layout/Footer/Footer'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Image from 'react-bootstrap/Image'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
@@ -17,7 +18,7 @@ export const Home = () =>(
         <div class = "container" >
         <br/>
         <h2 class = "title">Attraction Reccommendations</h2><br/>
-        <p>We love Amusement Parks, and we love helping families make the most of their visit to the parks. So, We created a Amusement Park Planner to help your family answer the most common questions...<br/> <br/> where to eat? or  what ride next?<br/> <br/>
+        <p>We love Amusement Parks, and we love helping families make the most of their visit to the parks. So, We created a Amusement Park Planner to help your family answer the most common questions...<br/> <br/> Where to eat? or  What ride next?<br/> <br/>
         We created a site where you can login and create a park planner by adding rides and resturants from the park so you can plan out your day and make most of your trip by sharing this with other family members.</p>
         </div>
 
@@ -63,15 +64,43 @@ export const Home = () =>(
             </Row>
         </Container>;
         </div>
-        <div>
-        <Container>
+
+    <div class = "pics">
+      
             <Row>
-              <Col lg={true}>large hero place icons and stuff here for prettiness</Col>
+              <Col lg={true}>
+                <Row>
+                     <Col aria-label="first group" md={4}>
+                         <Image  
+                            width = "400px"
+                            height = "300px"
+                            src="https://cdn.ventrata.com/image/upload/ar_1.5,c_fill,dpr_3.0,f_jpg,w_400/v1506370830/vimwsuqqtctakrxba5r6.jpg" rounded/>
+  
+                    </Col>
+
+                    <Col md={4} aria-label="second group">
+                        <Image 
+                            width = "400px"
+                            height = "300px"
+                            src="https://www.discoverlosangeles.com/sites/default/files/styles/hero/public/images/2019-01/USH_Tour_Yuri%201.jpg" rounded  />
+    
+                    </Col>
+
+                    <Col md= {4} aria-label="third group">
+                        <Image  
+                            width = "400px"
+                            height = "300px"
+                            src="https://secure.cdn1.wdpromedia.com/resize/mwImage/1/640/360/75/dam/wdpro-assets/dlr/gallery/destinations/california-adventure-park/disney-california-adventure-gallery00.jpg" rounded />
+                    </Col>
+                </Row>
+              </Col>
             </Row>
-        </Container>
+       
         </div>
+
         <div>
-        <Footer/>
+            <Footer/>
         </div>
     </div>
+
 )

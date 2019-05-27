@@ -39,3 +39,7 @@
     padding: 25px;
     margin: 10px;
 }
+.pics{
+    border: 15px solid white;
+    position: auto;
+}
