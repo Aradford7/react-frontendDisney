@@ -1,5 +1,6 @@
 import React from 'react'
 import NavBar from '../NavBar/NavBar'
+import Footer from '../Footer/Footer'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
@@ -12,9 +13,12 @@ export const Login = () =>(
     <div>
     <NavBar/>
     <div class = "container">
+        <div class = "logincontainer">
             <br/>
             <h2>Log in</h2>
             <h3>Use your email and password to log in.</h3>
+        </div>
+        <div class = "logincontainer">
        <Form className = "formcontainer">
             <Form.Group controlId="formBasicUsername">
                <Form.Label>Username</Form.Label>
@@ -38,7 +42,11 @@ export const Login = () =>(
         </Form>
 
         
-        
+        </div>
+    </div>
+    <div>
+        <br/><br/>
+        <Footer/>
     </div>
 </div>
 )
