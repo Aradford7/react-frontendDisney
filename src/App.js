@@ -5,7 +5,7 @@ import {Contact} from './layout/Contact/Contact'
 import {Login} from './layout/Login/Login'
 import {Register} from './layout/Register/Register'
 import {Logout} from './layout/Logout'
-import {Itinerary} from './layout/Itinerary'
+import {Itinerary} from './layout/Itinerary/Itinerary'
 import {NoMatch} from './layout/NoMatch'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 

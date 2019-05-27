@@ -38,28 +38,28 @@ export const Home = () =>(
                 <Row>
                     <Col md={3} aria-label="first group">
                     <div class = "colheart">
-                        <FontAwesomeIcon icon = "heart" size="3x"/>
+                        <FontAwesomeIcon icon = "heart" size="3x" style={{ color: 'dodgerblue' }}/>
                         <h4>Favorite Attractions</h4>
                         <p>You select your favorite attractions and plan when you want to go.</p>
                     </div>
                     </Col>
                     <Col md={3} aria-label="second group">
                     <div class = "colclock">
-                        <FontAwesomeIcon icon = "clock" size="3x"/>
+                        <FontAwesomeIcon icon = "clock" size="3x" style={{ color: 'dodgerblue' }}/>
                         <h4>Wait Times</h4>
                         <p>Using wait time information from themeparks api to guide you to the attractions with the shortest lines.</p>
                     </div>
                     </Col>
                     <Col md={3}aria-label="third group" >
                     <div class = "colhamburger">
-                        <FontAwesomeIcon icon = "hamburger" size="3x"/>
+                        <FontAwesomeIcon icon = "hamburger" size="3x" style={{ color: 'dodgerblue' }}/>
                         <h4>Resturants</h4>
                         <p>See a list of resturants the park has to offer! Browse the selection,plan out where to eat, before the crowds</p>
                     </div>
                     </Col>
                     <Col md={3} aria-label="forth group">
                     <div class = "colusers">
-                        <FontAwesomeIcon icon = "users"size="3x"/>
+                        <FontAwesomeIcon icon = "users"size="3x" style={{ color: 'dodgerblue' }}/>
                         <h4>Efficiency</h4>
                         <p>Make most we our app to plan out the perfect family vacation or make magical memories with friends</p>
                     </div>
@@ -67,6 +67,8 @@ export const Home = () =>(
                 </Row>
             </Container>
         </div>
+
+        <br/>
 
         <div class = "hero">
         <Container>
@@ -76,14 +78,14 @@ export const Home = () =>(
                 <Row>
                     <Col md={6} aria-label="first group">
                     <div class = "colAndriod">
-                        <FontAwesomeIcon icon={['fab', 'android']} size="6x"/>
+                        <FontAwesomeIcon icon={['fab', 'android']} size="6x" style={{ color: 'white' }}/>
                         <h4>Android App</h4>
                     </div>
                     </Col>
                 
                     <Col md={6} aria-label="second group">
                     <div class = "colApple">      
-                        <FontAwesomeIcon icon={['fab', 'apple']} size="6x"/>
+                        <FontAwesomeIcon icon={['fab', 'apple']} size="6x" style={{ color: 'white' }}/>
                         <h4>IOS App</h4>
                     </div>
                     </Col>
@@ -94,6 +96,9 @@ export const Home = () =>(
         </Container>
         </div>
 
+        <br/>
+
+    
         <div class = "itineraryinfo">
         <Container>
             <Row>
@@ -151,6 +156,8 @@ export const Home = () =>(
        
         </div>
 
+        <br/>
+        
         <div>
             <Footer/>
         </div>

@@ -50,7 +50,7 @@ export const Footer= () =>(
                 <a href="/">Home Route</a>
               </li>
               <li>
-                <a href="#!">Link 2</a>
+                <a href="/itinerary">Itinerary</a>
               </li>
               <li>
                 <a href="#!">Link 3</a>
