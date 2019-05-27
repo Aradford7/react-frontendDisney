@@ -1,6 +1,7 @@
 import React from 'react'
 
 import NavBar from '../NavBar/NavBar'
+import Footer from '../Footer/Footer'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Alert from 'react-bootstrap/Alert'
@@ -10,6 +11,7 @@ export const Register = () =>(
     <div>
     <NavBar/>
     <div class = "container">
+        <div class = "regicontainer">
         <br/>
         <h2>Register</h2>
         <h3>Create a new account.</h3>
@@ -49,9 +51,14 @@ export const Register = () =>(
             <Alert variant="light">
                 <Alert.Link href="/login">Already have an account? Log in now. </Alert.Link>
             </Alert>
-                <Button variant="primary" type="submit">Ok, Let's Go!</Button>
+                <Button variant="primary" type="submit" href="/itinerary"> Ok, Let's Go!</Button>
         </Form>
-  
+            </div>
+        </div>
+
+        <div>
+            <br/>
+            <Footer/>
         </div>
 </div>
 )

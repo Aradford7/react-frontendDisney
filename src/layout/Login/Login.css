@@ -5,10 +5,17 @@
 
 h2{
     text-align: left;
+
 }
 h3{
     text-align: left;
+  
 }
 .formcontainer{
     text-align: left;
+}
+.logincontainer{
+    width: 500px;
+    position: relative;
+    left: 20%;
 }
