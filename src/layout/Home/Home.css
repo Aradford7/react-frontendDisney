@@ -39,6 +39,20 @@
     padding: 25px;
     margin: 10px;
 }
+.colAndriod{
+    height : 400px;
+    width: 400px;
+    padding: 50px;
+  
+    text-align: center;
+}
+.colApple{
+    height : 400px;
+    width: 400px;
+    padding: 50px;
+    
+    text-align: center;
+}
 .pics{
     border: 15px solid white;
     position: center;
