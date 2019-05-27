@@ -41,5 +41,10 @@
 }
 .pics{
     border: 15px solid white;
-    position: auto;
+    position: center;
+    padding: 50px;
+    font-family: 'Maven Pro', sans-serif;
+}
+a{
+    position: center;
 }

@@ -5,6 +5,7 @@ import {Contact} from './layout/Contact/Contact'
 import {Login} from './layout/Login/Login'
 import {Register} from './layout/Register/Register'
 import {Logout} from './layout/Logout'
+import {Itinerary} from './layout/Itinerary'
 import {NoMatch} from './layout/NoMatch'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
@@ -37,6 +38,7 @@ class App extends Component {
             <Route path = "/login" component = {Login}/>
             <Route path = "/register" component = {Register}/>
             <Route path = "/logout" component = {Logout}/>
+            <Route path = "/itinerary" component = {Itinerary}/>
             <Route component = {NoMatch}/>
           </Switch>
         </Router>
