@@ -13,15 +13,17 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 ////////STYLING STUFF//////////
 import './App.css';
 import {library} from '@fortawesome/fontawesome-svg-core'
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faHamburger} from '@fortawesome/free-solid-svg-icons'
-import {faHeart} from '@fortawesome/free-solid-svg-icons'
-import {faClock} from '@fortawesome/free-solid-svg-icons'
-import {faUsers} from '@fortawesome/free-solid-svg-icons'
-library.add(faHamburger)
-library.add(faHeart)
-library.add(faClock)
-library.add(faUsers)
+//import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import {faHamburger,faHeart,faClock,faUsers} from '@fortawesome/free-solid-svg-icons'
+import {faGithubAlt,faApple,faAndroid,} from '@fortawesome/free-brands-svg-icons';
+
+
+
+library.add(faHamburger,faHeart,faClock,faUsers, faGithubAlt,faApple,  faAndroid,fab)
+
+
+
 ////////////////////////////////
 class App extends Component {
   state = {

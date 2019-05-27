@@ -15,8 +15,9 @@ export const Footer= () =>(
           {/* <!-- Grid column --> */}
           <div class="col-md-6 mt-md-0 mt-3">
             {/* <!-- Content --> */}
-            <h5 class="text-uppercase">Footer Content</h5>
-            <p>Here you can use rows and columns to organize your footer content.</p>
+            <h5 class="text-uppercase">MY PARK PLANNER</h5>
+            <p> We would love to hear from you. Contact us on social media or send us an email with any questions or feedback. Or hire us! That will be awesome!</p>
+            <p>MyParkPlanner.com is in no way afflicated with The Walt Disney Company, Disney World, Disneyland, Universal Pictures, Universal Studios or any of their subsidaries.</p>
           </div>
           {/* <!-- Grid column --> */}
           <hr class="clearfix w-100 d-md-none pb-3"></hr>
@@ -46,7 +47,7 @@ export const Footer= () =>(
             <h5 class="text-uppercase">Dev Links</h5>
             <ul class="list-unstyled">
               <li>
-                <a href="#!">Link 1</a>
+                <a href="/">Home Route</a>
               </li>
               <li>
                 <a href="#!">Link 2</a>
