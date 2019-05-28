@@ -8,7 +8,7 @@ export const Itinerary = () =>(
     <div>
         <NavBar/>
         <h2>My Itineraries</h2>
-        <Button href ='/#!'>Add</Button>
+        <Button href ='/newitinerary'>Add</Button>
         <p>Welcome! You have no itineraries yet</p>
         <p> This should be the Itinarary show page for an Individual User after they logged in</p>
 

@@ -45,15 +45,15 @@ export const Footer= () =>(
           <div class="col-md-3 mb-md-0 mb-3">
             {/* <!-- Links --> */}
             <h5 class="text-uppercase">Dev Links</h5>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled" >
               <li>
-                <a href="/">Home Route</a>
+                <a  href="/">Home Route</a>
               </li>
               <li>
                 <a href="/itinerary">Itinerary</a>
               </li>
               <li>
-                <a href="#!">Link 3</a>
+                <a href="/newitinerary">AddNewItin</a>
               </li>
               <li>
                 <a href="#!">Link 4</a>

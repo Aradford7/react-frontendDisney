@@ -5,11 +5,15 @@ footer{
     font-family: 'Maven Pro', sans-serif;
 }
 a{
-    color: darkslategrey
+    color: white;
+
 }
 .footerrow{
     background-color: darkblue;
     width: auto;
     opacity: .4;
     
+}
+ul{
+    color: white;
 }
