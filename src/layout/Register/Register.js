@@ -11,7 +11,8 @@ import './Register.css'
 export const Register = () =>(
     <div>
     <NavBar/>
-    <Parallax/>
+    <Parallax />
+    
     <div class = "container">
         <div class = "regicontainer">
         <br/>
@@ -57,7 +58,7 @@ export const Register = () =>(
         </Form>
             </div>
         </div>
-
+        <Parallax/>
         <div>
             <br/>
             <Footer/>

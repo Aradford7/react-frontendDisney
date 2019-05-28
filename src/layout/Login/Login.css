@@ -13,9 +13,13 @@ h3{
 }
 .formcontainer{
     text-align: left;
+   
 }
 .logincontainer{
     width: 500px;
     position: relative;
-    left: 20%;
+    left: 30%;
+}
+.loginpg{
+    background-color: white;
 }
