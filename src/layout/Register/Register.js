@@ -58,7 +58,7 @@ export const Register = () =>(
         </Form>
             </div>
         </div>
-        <Parallax/>
+    
         <div>
             <br/>
             <Footer/>
