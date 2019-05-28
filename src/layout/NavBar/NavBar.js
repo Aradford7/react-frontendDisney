@@ -27,7 +27,7 @@ const NavBar = () =>
         <NavLink exact to = {routes.HOME}><Nav.Link href="/"></Nav.Link></NavLink>
     </Nav>
     <Nav className="justify-content-end">
-        <NavLink  to={routes.PARKS} activeClassName = "selected"> <Nav.Link href="/parks">Parks</Nav.Link></NavLink>
+        <NavLink  to={routes.PARKS} activeClassName = "selected"> <Nav.Link class = "plink" href="/parks">Parks</Nav.Link></NavLink>
         <NavLink  to={routes.TODO} activeClassName = "selected"> <Nav.Link href="/activities">Things to Do</Nav.Link></NavLink>
         <NavLink  to={routes.REGISTER} activeClassName = "selected"><ButtonToolbar><ButtonGroup  className="mr-2" aria-label="First group"><Button class ="btn" href = "/register">REGISTER</Button></ButtonGroup></ButtonToolbar></NavLink>
         <NavLink  to={'/login'} activeClassName = "selected"><ButtonToolbar><ButtonGroup aria-label="Second group"><Button href = "/login">LOGIN</Button></ButtonGroup></ButtonToolbar></NavLink>

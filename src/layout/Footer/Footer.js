@@ -7,7 +7,7 @@ import './Footer.css'
 
 export const Footer= () =>(
     // <!-- Footer -->
-    <footer class="page-footer font-small blue pt-4">
+    <footer class="page-footer font-small  pt-4">
       {/* <!-- Footer Links --> */}
       <div class="container-fluid text-center text-md-left">
         {/* <!-- Grid row --> */}
@@ -27,16 +27,16 @@ export const Footer= () =>(
             <h5 class="text-uppercase">Links</h5>
             <ul class="list-unstyled">
               <li>
-                <a href="/about">About</a>
+                <a className = "link" href="/about">About</a>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <a className = "link" href="/contact">Contact</a>
               </li>
               <li>
-                <a href="#!">Link 3</a>
+                <a className = "link" href="#!">Link 3</a>
               </li>
               <li>
-                <a href="#!">Link 4</a>
+                <a className = "link" href="#!">Link 4</a>
               </li>
             </ul>
           </div>
@@ -47,16 +47,16 @@ export const Footer= () =>(
             <h5 class="text-uppercase">Dev Links</h5>
             <ul class="list-unstyled" >
               <li>
-                <a  href="/">Home Route</a>
+                <a className = "link" href="/">Home Route</a>
               </li>
               <li>
-                <a href="/itinerary">Itinerary</a>
+                <a className = "link" href="/itinerary">Itinerary</a>
               </li>
               <li>
-                <a href="/newitinerary">AddNewItin</a>
+                <a className = "link" href="/newitinerary">AddNewItin</a>
               </li>
               <li>
-                <a href="#!">Link 4</a>
+                <a className = "link" href="#!">Link 4</a>
               </li>
             </ul>
           </div>
