@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
+import Form from 'react-bootstrap/Form'
+import Calendar from '../Calendar/Calender'
 import { Container, Row, Col} from 'react-bootstrap';
 
 import './Itinerary.css'
@@ -11,7 +13,8 @@ class Itinerary extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
+      lgShow: false,
     };
 
     this.toggle = this.toggle.bind(this);
@@ -24,6 +27,7 @@ class Itinerary extends Component {
   }
 
   render() {
+    const lgClose = () => this.setState({ lgShow: false });
     const externalCloseBtn = <button className="close" style={{ position: 'absolute', top: '15px', right: '15px' }} onClick={this.toggle}>&times;</button>;
     return (
       <div>
@@ -36,15 +40,49 @@ class Itinerary extends Component {
         <p>Welcome! You have no itineraries yet</p>
         <p> This should be the Itinarary show page for an Individual User after they logged in</p>
 
-        <div class = "newContainer">
+        <div className = "Modal">
           <h1> Create A New Itinerary</h1>
         <div className = "formModal">
         <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}Add A New Visit</Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} external={externalCloseBtn}>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} external={externalCloseBtn} size="lg" show={this.state.lgShow} onHide={lgClose}>
           <ModalHeader>Add new itinerary</ModalHeader>
           <ModalBody>
-            <b>Look at the top right of the page/viewport!</b><br />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+           <Form>
+            <Form.Row>
+              <Form.Group as={Col} controlId="formGridEmail">
+                  <Form.Label>Visit Name</Form.Label>
+                  <Form.Control type="email" placeholder="Visit name is required." />
+              </Form.Group>
+            </Form.Row>
+
+
+            <Form.Group as={Col} controlId="formGridPark">
+                  <Form.Label>Which theme park are you attending?</Form.Label>
+                  <Form.Control as="select">
+                        <option>Choose...</option>
+                        <option>Disneyland - Anaheim, California</option>
+                        <option>Disney Land California Adventures - Anaheim, California</option>
+                        <option>Universal Studios Hollywood -  Studios, City</option>
+                  </Form.Control>
+              </Form.Group>
+
+            <Form.Row>
+              <Form.Group as={Col}  xs = {6} controlId="formGridDate">
+                  <Form.Label>Which date will ?</Form.Label>
+                  <Calendar/>
+              </Form.Group>
+              
+              <Form.Group as={Col} xs = {6} controlId="formGridDate">
+                  <Form.Label>Check-out Date</Form.Label>
+                  <Calendar/>
+              </Form.Group>
+          </Form.Row>
+      </Form>
+
+
+
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggle} href = "/newitinerary">Do Something</Button>{' '}
@@ -52,7 +90,7 @@ class Itinerary extends Component {
           </ModalFooter>
         </Modal>
         </div>
-        </div>
+     </div>
 
         <div>
         <p>if there was any items already in user array show on this page, this will need to render a component that list previous itineraries and able to delete overrall array maybe</p>

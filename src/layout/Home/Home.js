@@ -54,14 +54,14 @@ export const Home = () =>(
                     <div class = "colhamburger">
                         <FontAwesomeIcon icon = "hamburger" size="3x" style={{ color: 'dodgerblue' }}/>
                         <h4>Resturants</h4>
-                        <p>See a list of resturants the park has to offer! Browse the selection,plan out where to eat, before the crowds</p>
+                        <p>See a list of resturants the park has to offer! Browse the selection,plan out where to eat, before the crowds.</p>
                     </div>
                     </Col>
                     <Col md={3} aria-label="forth group">
                     <div class = "colusers">
                         <FontAwesomeIcon icon = "users"size="3x" style={{ color: 'dodgerblue' }}/>
                         <h4>Efficiency</h4>
-                        <p>Make most we our app to plan out the perfect family vacation or make magical memories with friends</p>
+                        <p>Make most we our app to plan out the perfect family vacation or make magical memories with friends.</p>
                     </div>
                     </Col>
                 </Row>
