@@ -5,8 +5,9 @@ import {Contact} from './layout/Contact/Contact'
 import {Login} from './layout/Login/Login'
 import {Register} from './layout/Register/Register'
 import {Logout} from './layout/Logout'
-import {Itinerary} from './layout/Itinerary/Itinerary'
-import FormModal  from './layout/FormModal/FormModal'
+import Itinerary from './layout/Itinerary/Itinerary'
+import {AddNewItin} from './layout/AddNewItin/AddNewItin'
+
 
 import {NoMatch} from './layout/NoMatch'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
@@ -42,7 +43,7 @@ class App extends Component {
             <Route path = "/register" component = {Register}/>
             <Route path = "/logout" component = {Logout}/>
             <Route path = "/itinerary" component = {Itinerary}/>
-            <Route path ="/newitinerary" component = {FormModal} />
+            <Route path = "/newitinerary" component = {AddNewItin}/>
             <Route component = {NoMatch}/>
           </Switch>
         </Router>

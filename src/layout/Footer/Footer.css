@@ -5,7 +5,8 @@ footer{
     font-family: 'Maven Pro', sans-serif;
 }
 a{
-    color: white;
+    color: white ;
+    background-color:white;
 
 }
 .footerrow{
@@ -16,4 +17,11 @@ a{
 }
 ul{
     color: white;
+}
+li{
+    color:white;
+}
+
+.link{
+    color:white;
 }

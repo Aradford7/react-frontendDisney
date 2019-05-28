@@ -1,6 +1,7 @@
 .container {
     width: 800px;
     font-family: 'Maven Pro', sans-serif;
+    position: center;
 }
 
 .formcontainer{
