@@ -5,11 +5,13 @@ import Footer from '../Footer/Footer'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Alert from 'react-bootstrap/Alert'
+import Parallax from '../Parallax/Parallax'
 import './Register.css'
 
 export const Register = () =>(
     <div>
     <NavBar/>
+    <Parallax/>
     <div class = "container">
         <div class = "regicontainer">
         <br/>
@@ -62,3 +64,5 @@ export const Register = () =>(
         </div>
 </div>
 )
+
+export default Register

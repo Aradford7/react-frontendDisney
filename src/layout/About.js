@@ -1,11 +1,19 @@
 import React from 'react'
+
+import NavBar from './NavBar/NavBar'
+import Footer from './Footer/Footer'
+import Parallax from './Parallax/Parallax'
 import Button from 'react-bootstrap/Button';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 
 export const About = () =>(
     <div>
+        <NavBar/>
         <h2>Hello World</h2>
         <p>This is the About Page</p>
+
+        <Parallax/>
+
         <ButtonToolbar>
                 <Button variant="primary">Primary</Button>
                 <Button variant="secondary">Secondary</Button>
@@ -18,5 +26,7 @@ export const About = () =>(
                 <Button variant="link">Link</Button>
         </ButtonToolbar>
 
+
+        <Footer/>
     </div>
 )
