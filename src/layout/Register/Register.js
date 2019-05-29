@@ -95,7 +95,7 @@ class Register extends Component {
                   Already have an account? Log in now.{" "}
                 </Alert.Link>
               </Alert>
-              <Button variant="primary" type="submit" href="/itinerary">
+              <Button variant="primary" type="submit">
                 {" "}
                 Ok, Let's Go!
               </Button>

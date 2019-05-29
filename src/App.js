@@ -46,7 +46,9 @@ library.add(
 ////////////////////////////////
 class App extends Component {
   state = {
-    modal: false
+    modal: false,
+    logged: false,
+    currentUser: null
   };
 
   componentDidMount() {
@@ -55,6 +57,36 @@ class App extends Component {
 
   handleRegister = async data => {
     try {
+      const registerCall = await fetch(
+        "http://localhost:8000/users/registration",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }
+      );
+      const response = await registerCall.json();
+      console.log(response, "from the flask server on localhost:8000");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  handleLogin = async data => {
+    try {
+      const registerCall = await fetch("http://localhost:8000/users/login", {
+        method: "POST",
+        body: JSON.stringify(data),
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+      const response = await registerCall.json();
+      console.log(response, "from the flask server on localhost:8000");
     } catch (err) {
       console.log(err);
     }
@@ -79,7 +111,12 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
             <Route path="/login" component={Login} />
-            <Route path="/register" render={props => <Register {...props} />} />
+            <Route
+              path="/register"
+              render={props => (
+                <Register {...props} handleRegister={this.handleRegister} />
+              )}
+            />
             <Route path="/logout" component={Logout} />
             <Route path="/itinerary" component={Itinerary} />
             <Route path="/newitinerary" component={AddNewItin} />
