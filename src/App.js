@@ -3,7 +3,7 @@ import {Home} from './layout/Home/Home'
 import {About} from './layout/About'
 import {Contact} from './layout/Contact/Contact'
 import Login from './layout/Login/Login'
-import {Register} from './layout/Register/Register'
+import Register from './layout/Register/Register'
 import {Logout} from './layout/Logout'
 import Itinerary from './layout/Itinerary/Itinerary'
 import {AddNewItin} from './layout/AddNewItin/AddNewItin'
@@ -31,8 +31,17 @@ library.add(faHamburger,faHeart,faClock,faUsers, faGithubAlt,faApple,  faAndroid
 ////////////////////////////////
 class App extends Component {
   state = {
-    modal: false
+    modal: false,
+    currentUser: null
   }
+  doSetCurrentUser = user =>
+  this.setState({
+    currentUser: user
+  })
+
+componentDidMount() {
+
+}
   render(){
   return (
     <React.Fragment>
