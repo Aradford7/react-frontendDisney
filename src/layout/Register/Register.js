@@ -1,13 +1,17 @@
+
 import React, { Component } from "react";
 
-import NavBar from "../NavBar/NavBar";
-import Footer from "../Footer/Footer";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Alert from "react-bootstrap/Alert";
-import Parallax from "../Parallax/Parallax";
-import "./Register.css";
+import NavBar from '../NavBar/NavBar'
+import Footer from '../Footer/Footer'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Alert from 'react-bootstrap/Alert'
+import {Parallax} from 'react-parallax'
+import './Register.css'
 
+
+
+    
 class Register extends Component {
   state = {
     username: "",
@@ -25,14 +29,24 @@ class Register extends Component {
     e.preventDefault();
     this.props.handleRegister(this.state);
   };
+  render(){
+        
+        return(
+            <div >
+                <NavBar/>
 
-  render() {
-    return (
-      <div>
-        <NavBar />
-        <Parallax />
+   <Parallax
+      blur={0}
+      bgImage={require('../Parallax/images/1.jpg')}
+      bgImageAlt= ""
+      strength={200}
+      >  
+      <div style={{ height: '500px' }} />
+      </Parallax>
+ 
+      
 
-        <div class="container">
+      
           <div class="regicontainer">
             <br />
             <h2>Register</h2>
@@ -63,6 +77,7 @@ class Register extends Component {
                   We'll never share your email with anyone else.
                 </Form.Text>
               </Form.Group>
+
 
               <Form.Group controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
@@ -100,16 +115,30 @@ class Register extends Component {
                 Ok, Let's Go!
               </Button>
             </Form>
-          </div>
-        </div>
 
-        <div>
-          <br />
-          <Footer />
-        </div>
-      </div>
-    );
-  }
-}
 
-export default Register;
+
+            </div>
+      
+       
+            <Parallax
+        blur={0}
+        bgImage={require('../Parallax/images/2.jpg')}
+        bgImageAlt= ""
+        strength={200}
+        > 
+        <div style={{ height: '500px' }} />
+      </Parallax>
+
+           
+            <Footer/>
+   
+        </div>
+        )
+
+        }
+    }
+
+    export default Register
+
+

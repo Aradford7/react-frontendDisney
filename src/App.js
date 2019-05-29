@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import { Home } from "./layout/Home/Home";
 import { About } from "./layout/About";
@@ -47,6 +48,7 @@ library.add(
 class App extends Component {
   state = {
     modal: false,
+
     logged: false,
     currentUser: null
   };
@@ -114,9 +116,11 @@ class App extends Component {
     }
   };
 
-  render() {
-    return (
-      <React.Fragment>
+
+
+  render(){
+  return (
+    <React.Fragment>
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
