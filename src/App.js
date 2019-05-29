@@ -49,6 +49,10 @@ class App extends Component {
     modal: false
   };
 
+  componentDidMount() {
+    this.getTrips();
+  }
+
   handleRegister = async data => {
     try {
     } catch (err) {
@@ -75,7 +79,7 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
             <Route path="/login" component={Login} />
-            <Route path="/register" component={Register} />
+            <Route path="/register" render={props => <Register {...props} />} />
             <Route path="/logout" component={Logout} />
             <Route path="/itinerary" component={Itinerary} />
             <Route path="/newitinerary" component={AddNewItin} />
