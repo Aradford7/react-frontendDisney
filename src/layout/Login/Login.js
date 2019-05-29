@@ -1,10 +1,8 @@
 import React from 'react'
 import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
-import Parallax from '../Parallax/Parallax'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-import Alert from 'react-bootstrap/Alert'
+
+import {Alert, Button, Form,} from 'react-bootstrap'
 
 import './Login.css'
 
@@ -14,7 +12,9 @@ export default class Login extends React.Component {
         return(
             <div className = "loginpg">
                 <NavBar/>
-                <Parallax/>
+      
+
+
 
                 <div class = "container">
                     <div class = "logincontainer">
@@ -22,6 +22,8 @@ export default class Login extends React.Component {
                     <h2>Log in</h2>
                     <h3>Use your email and password to log in.</h3>
                 </div>
+
+
 
                 <div class = "logincontainer">
                     <Form className = "formcontainer">

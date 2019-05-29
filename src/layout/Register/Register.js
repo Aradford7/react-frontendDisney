@@ -1,21 +1,34 @@
 import React from "react";
+import NavBar from '../NavBar/NavBar'
+import Footer from '../Footer/Footer'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Alert from 'react-bootstrap/Alert'
+import {Parallax} from 'react-parallax'
+import './Register.css'
 
-import NavBar from "../NavBar/NavBar";
-import Footer from "../Footer/Footer";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Alert from "react-bootstrap/Alert";
-import Parallax from "../Parallax/Parallax";
-import "./Register.css";
+class Register extends React.Component {
+    render(){
+        
+        return(
+            <div >
+    <NavBar/>
+  
+    
+    <Parallax
+      blur={0}
+      bgImage={require('../Parallax/images/1.jpg')}
+      bgImageAlt= ""
+      strength={200}
+      >  
+      <div style={{ height: '500px' }} />
+      </Parallax>
+    
 
-export const Register = () => (
-  <div>
-    <NavBar />
-    <Parallax />
+ 
+        <div class = "regicontainer">
+        <br/>
 
-    <div class="container">
-      <div class="regicontainer">
-        <br />
         <h2>Register</h2>
         <h3>Create a new account.</h3>
         <Form className="formcontainer">
@@ -57,14 +70,28 @@ export const Register = () => (
             Ok, Let's Go!
           </Button>
         </Form>
-      </div>
-    </div>
 
-    <div>
-      <br />
-      <Footer />
-    </div>
-  </div>
-);
+            </div>
+      
+       
+            <Parallax
+        blur={0}
+        bgImage={require('../Parallax/images/2.jpg')}
+        bgImageAlt= ""
+        strength={200}
+        > 
+        <div style={{ height: '500px' }} />
+      </Parallax>
 
-export default Register;
+           
+            <Footer/>
+   
+        </div>
+        )
+
+        }
+    }
+
+    export default Register
+=======
+

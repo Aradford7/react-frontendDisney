@@ -1,14 +1,31 @@
 .container {
-    width: 800px;
+    width: 900px;
     font-family: 'Maven Pro', sans-serif;
     position: center;
+   
 }
 
 .formcontainer{
     text-align: left;
+    width: 500;
+   
 }
-.regicontainer{
+/* .regicontainer{
     width: 500px;
     position: relative;
     left: 30%;
+    margin-top: 200px;
+    background-color: white;
+    margin: 10px;
+    padding: 50px;
+    bottom: 700px;
+    
+} */
+.regicontainer{
+    height: 700px;
+    width: 500px;
+    position: relative;
+    left: 35%;
+  
+    
 }
