@@ -8,7 +8,7 @@ import Alert from 'react-bootstrap/Alert'
 import {Parallax} from 'react-parallax'
 import './Register.css'
 
-export default class imgParallax extends React.Component {
+class Register extends React.Component {
     render(){
         
         return(
@@ -89,3 +89,5 @@ export default class imgParallax extends React.Component {
 
         }
     }
+
+    export default Register
