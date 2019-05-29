@@ -22,6 +22,10 @@ class Register extends Component {
       [e.target.name]: e.target.value
     })
   }
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.props.handleRegister(this.state)
+  }
 
   handleRegister = async data => {
     try {
