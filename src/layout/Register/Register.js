@@ -1,4 +1,6 @@
-import React from "react";
+
+import React, { Component } from "react";
+
 import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
 import Form from 'react-bootstrap/Form'
@@ -7,15 +9,33 @@ import Alert from 'react-bootstrap/Alert'
 import {Parallax} from 'react-parallax'
 import './Register.css'
 
-class Register extends React.Component {
-    render(){
+
+
+    
+class Register extends Component {
+  state = {
+    username: "",
+    email: "",
+    password: "",
+    verify_password: ""
+  };
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.handleRegister(this.state);
+  };
+  render(){
         
         return(
             <div >
-    <NavBar/>
-  
-    
-    <Parallax
+                <NavBar/>
+
+   <Parallax
       blur={0}
       bgImage={require('../Parallax/images/1.jpg')}
       bgImageAlt= ""
@@ -23,53 +43,80 @@ class Register extends React.Component {
       >  
       <div style={{ height: '500px' }} />
       </Parallax>
-    
-
  
-        <div class = "regicontainer">
-        <br/>
+      
 
-        <h2>Register</h2>
-        <h3>Create a new account.</h3>
-        <Form className="formcontainer">
-          <Form.Group controlId="formBasicUsername">
-            <Form.Label>Create A Username</Form.Label>
-            <Form.Control type="username" placeholder="Enter Username" />
-            <Form.Text className="text-muted">Username is required.</Form.Text>
-          </Form.Group>
+      
+          <div class="regicontainer">
+            <br />
+            <h2>Register</h2>
+            <h3>Create a new account.</h3>
+            <Form className="formcontainer" onSubmit={this.handleSubmit}>
+              <Form.Group controlId="formBasicUsername">
+                <Form.Label>Create A Username</Form.Label>
+                <Form.Control
+                  name="username"
+                  type="username"
+                  placeholder="Enter Username"
+                  onChange={this.handleChange}
+                />
+                <Form.Text className="text-muted">
+                  Username is required.
+                </Form.Text>
+              </Form.Group>
 
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="Enter Email" />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
+              <Form.Group controlId="formBasicEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  name="email"
+                  type="email"
+                  placeholder="Enter Email"
+                  onChange={this.handleChange}
+                />
+                <Form.Text className="text-muted">
+                  We'll never share your email with anyone else.
+                </Form.Text>
+              </Form.Group>
 
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-            <Form.Text className="text-muted">Password is required.</Form.Text>
-          </Form.Group>
 
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>Confirm Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-            <Form.Text className="text-muted">
-              Please confirm your password.
-            </Form.Text>
-          </Form.Group>
+              <Form.Group controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                  onChange={this.handleChange}
+                />
+                <Form.Text className="text-muted">
+                  Password is required.
+                </Form.Text>
+              </Form.Group>
 
-          <Alert variant="light">
-            <Alert.Link href="/login">
-              Already have an account? Log in now.{" "}
-            </Alert.Link>
-          </Alert>
-          <Button variant="primary" type="submit" href="/itinerary">
-            {" "}
-            Ok, Let's Go!
-          </Button>
-        </Form>
+              <Form.Group controlId="formBasicPassword">
+                <Form.Label>Confirm Password</Form.Label>
+                <Form.Control
+                  name="verify_password"
+                  type="password"
+                  placeholder="Password"
+                  onChange={this.handleChange}
+                />
+                <Form.Text className="text-muted">
+                  Please confirm your password.
+                </Form.Text>
+              </Form.Group>
+
+              <Alert variant="light">
+                <Alert.Link href="/login">
+                  Already have an account? Log in now.{" "}
+                </Alert.Link>
+              </Alert>
+              <Button variant="primary" type="submit">
+                {" "}
+                Ok, Let's Go!
+              </Button>
+            </Form>
+
+
 
             </div>
       
