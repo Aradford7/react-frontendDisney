@@ -20,6 +20,11 @@ class Login extends Component {
     });
   };
 
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.handleLogin(this.state);
+  };
+
   render() {
     return (
       <div className="loginpg">
@@ -34,7 +39,7 @@ class Login extends Component {
           </div>
 
           <div class="logincontainer">
-            <Form className="formcontainer">
+            <Form className="formcontainer" onSubmit={this.handleSubmit}>
               <Form.Group controlId="formBasicUsername">
                 <Form.Label>Username</Form.Label>
                 <Form.Control
@@ -68,7 +73,7 @@ class Login extends Component {
                 </Alert.Link>
               </Alert>
 
-              <Button variant="primary" type="submit" href="/itinerary">
+              <Button variant="primary" type="submit">
                 Sign In
               </Button>
             </Form>
