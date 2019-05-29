@@ -48,6 +48,24 @@ class App extends Component {
   state = {
     modal: false
   };
+
+  handleRegister = async data => {
+    try {
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  getTrips = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/api/v1/", {
+        credentials: "include"
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   render() {
     return (
       <React.Fragment>
