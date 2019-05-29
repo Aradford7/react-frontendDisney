@@ -26,17 +26,6 @@ class Register extends Component {
     this.props.handleRegister(this.state);
   };
 
-  handleRegister = async data => {
-    try {
-      const registerCall = fetch("http://localhost:8000/users/registration", {
-        method: "POST",
-        body: JSON.stringify(data)
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
   render() {
     return (
       <div>
