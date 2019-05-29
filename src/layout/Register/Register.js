@@ -9,27 +9,26 @@ import Parallax from "../Parallax/Parallax";
 import "./Register.css";
 
 class Register extends Component {
-
   state = {
-    username = '',
-    email: '',
-    password: '',
-    verify_password: ''
-  }
+    username: "",
+    email: "",
+    password: "",
+    verify_password: ""
+  };
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
-    })
-  }
-  handleSubmit = (e) => {
-    e.preventDefault()
-    this.props.handleRegister(this.state)
-  }
+    });
+  };
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.handleRegister(this.state);
+  };
 
   handleRegister = async data => {
     try {
-      const registerCall = fetech("http://localhost:8000/users/registration", {
+      const registerCall = fetch("http://localhost:8000/users/registration", {
         method: "POST",
         body: JSON.stringify(data)
       });
@@ -49,13 +48,14 @@ class Register extends Component {
             <br />
             <h2>Register</h2>
             <h3>Create a new account.</h3>
-            <Form className="formcontainer">
+            <Form className="formcontainer" onSubmit={this.handleSubmit}>
               <Form.Group controlId="formBasicUsername">
                 <Form.Label>Create A Username</Form.Label>
                 <Form.Control
                   name="username"
                   type="username"
                   placeholder="Enter Username"
+                  onChange={this.handleChange}
                 />
                 <Form.Text className="text-muted">
                   Username is required.
@@ -68,6 +68,7 @@ class Register extends Component {
                   name="email"
                   type="email"
                   placeholder="Enter Email"
+                  onChange={this.handleChange}
                 />
                 <Form.Text className="text-muted">
                   We'll never share your email with anyone else.
@@ -80,6 +81,7 @@ class Register extends Component {
                   name="password"
                   type="password"
                   placeholder="Password"
+                  onChange={this.handleChange}
                 />
                 <Form.Text className="text-muted">
                   Password is required.
@@ -92,6 +94,7 @@ class Register extends Component {
                   name="verify_password"
                   type="password"
                   placeholder="Password"
+                  onChange={this.handleChange}
                 />
                 <Form.Text className="text-muted">
                   Please confirm your password.
