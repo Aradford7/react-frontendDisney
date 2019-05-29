@@ -70,10 +70,12 @@ class App extends Component {
       );
       const response = await registerCall.json();
       console.log(response, "from the flask server on localhost:8000");
-      this.setState({
-        logged: true,
-        currentUser: response
-      });
+      if (response.message === "success") {
+        this.setState({
+          logged: true,
+          currentUser: response
+        });
+      }
     } catch (err) {
       console.log(err);
     }
@@ -91,10 +93,12 @@ class App extends Component {
       });
       const response = await registerCall.json();
       console.log(response, "from the flask server on localhost:8000");
-      this.setState({
-        logged: true,
-        currentUser: response
-      });
+      if (response.message === "success") {
+        this.setState({
+          logged: true,
+          currentUser: response.user
+        });
+      }
     } catch (err) {
       console.log(err);
     }
