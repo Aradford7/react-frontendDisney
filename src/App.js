@@ -70,6 +70,10 @@ class App extends Component {
       );
       const response = await registerCall.json();
       console.log(response, "from the flask server on localhost:8000");
+      this.setState({
+        logged: true,
+        currentUser: response
+      });
     } catch (err) {
       console.log(err);
     }
@@ -87,6 +91,10 @@ class App extends Component {
       });
       const response = await registerCall.json();
       console.log(response, "from the flask server on localhost:8000");
+      this.setState({
+        logged: true,
+        currentUser: response
+      });
     } catch (err) {
       console.log(err);
     }
@@ -110,7 +118,12 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
-            <Route path="/login" component={Login} />
+            <Route
+              path="/login"
+              render={props => (
+                <Login {...props} handleLogin={this.handleLogin} />
+              )}
+            />
             <Route
               path="/register"
               render={props => (
