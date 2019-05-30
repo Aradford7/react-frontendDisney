@@ -3,3 +3,8 @@
     background-color: white;
     height: 250px;
 }
+
+.User{
+    border : 5px solid black;
+    background: dodgerblue;
+}

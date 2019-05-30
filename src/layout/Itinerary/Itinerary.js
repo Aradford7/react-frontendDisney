@@ -3,12 +3,13 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import Form from "react-bootstrap/Form";
-import Calendar from "../Calendar/Calender";
+// import UserItinerary from '../UserItinerary/UserItinerary'
 import { Container, Row, Col } from "react-bootstrap";
 import DayPicker from "react-day-picker";
 import "react-day-picker/lib/style.css";
 
 import "./Itinerary.css";
+import UserItinerary from "../UserItinerary/UserItinerary";
 
 class Itinerary extends Component {
   constructor(props) {
@@ -82,6 +83,10 @@ class Itinerary extends Component {
 
         <div className="Modal">
           <h1> Create A New Itinerary</h1>
+          
+          <div className = "User">
+          <UserItinerary/>
+          </div>
 
           <div className="formModal">
             <Button color="danger" onClick={this.toggle}>
@@ -172,6 +177,11 @@ class Itinerary extends Component {
             will need to render a component that list previous itineraries and
             able to delete overrall array maybe
           </p>
+
+
+          
+
+
           <Button>Delete</Button>
         </div>
 
