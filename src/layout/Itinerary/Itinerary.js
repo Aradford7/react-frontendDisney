@@ -13,6 +13,7 @@ import "./Itinerary.css";
 class Itinerary extends Component {
   constructor(props) {
     super(props);
+    this.handleDayClick = this.handleDayClick.bind(this);
     this.state = {
       modal: false,
       lgShow: false,
@@ -41,14 +42,17 @@ class Itinerary extends Component {
     this.props.createTrip(this.state);
   };
 
-  handleDayChange(selectedDay, modifiers, dayPickerInput) {
-    const input = dayPickerInput.getInput();
-    this.setState({
-      selectedDay,
-      isEmpty: !input.value.trim(),
-      isValidDay: typeof selectedDay !== "undefined",
-      isDisabled: modifiers.disabled === true
-    });
+  handleDayClick(day, { selected, disabled }) {
+    if (disabled) {
+      // Day is disabled, do nothing
+      return;
+    }
+    if (selected) {
+      // Unselect the day if already selected
+      this.setState({ selectedDay: undefined });
+      return;
+    }
+    this.setState({ selectedDay: day });
   }
 
   render() {
@@ -127,12 +131,24 @@ class Itinerary extends Component {
                   <Form.Row>
                     <Form.Group as={Col} xs={6} controlId="formGridDate">
                       <Form.Label>Which date will ?</Form.Label>
-                      <Calendar handleDayChange={this.handleDayChange} />
+                      <DayPicker
+                        onDayClick={this.handleDayClick}
+                        selectedDays={this.state.selectedDay}
+                        disabledDays={{ daysOfWeek: [0] }}
+                      />
+                      {this.state.selectedDay ? (
+                        <p>
+                          You clicked{" "}
+                          {this.state.selectedDay.toLocaleDateString()}
+                        </p>
+                      ) : (
+                        <p>Please select a day.</p>
+                      )}
                     </Form.Group>
 
                     <Form.Group as={Col} xs={6} controlId="formGridDate">
                       <Form.Label>Check-out Date</Form.Label>
-                      <Calendar />
+                      {/* <Calendar /> */}
                     </Form.Group>
                   </Form.Row>
                 </Form>
