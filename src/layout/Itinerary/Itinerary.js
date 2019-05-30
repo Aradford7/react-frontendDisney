@@ -82,6 +82,7 @@ class Itinerary extends Component {
 
         <div className="Modal">
           <h1> Create A New Itinerary</h1>
+
           <div className="formModal">
             <Button color="danger" onClick={this.toggle}>
               {this.props.buttonLabel}Add A New Visit
