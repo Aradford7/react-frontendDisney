@@ -49,7 +49,6 @@ library.add(
 class App extends Component {
   state = {
     modal: false,
-
     logged: false,
     currentUser: null
   };
@@ -73,12 +72,12 @@ class App extends Component {
       );
       const response = await registerCall.json();
       console.log(response, "response from registerCall");
-      if (response.message === "success") {
-        this.setState({
-          logged: true,
-          currentUser: response
-        });
-      }
+      // if (response.message === "success") {
+      this.setState({
+        logged: true,
+        currentUser: response
+      });
+      // }
     } catch (err) {
       console.log(err);
     }
@@ -96,12 +95,12 @@ class App extends Component {
       });
       const response = await loginCall.json();
       console.log(response, "response for loginCall");
-      if (response.message === "success") {
-        this.setState({
-          logged: true,
-          currentUser: response.user
-        });
-      }
+      // if (response.message === "success") {
+      this.setState({
+        logged: true,
+        currentUser: response.user
+      });
+      // }
     } catch (err) {
       console.log(err);
     }
@@ -111,7 +110,9 @@ class App extends Component {
     try {
       const tripCall = await fetch("http://localhost:8000/api/v1/trips", {
         method: "POST",
-        body: JSON.stringify(data),
+        body: JSON.stringify(
+          Object.assign(data, { userId: this.state.currentUser.id })
+        ),
         credentials: "include",
         headers: {
           "Content-Type": "application/json"
@@ -158,7 +159,11 @@ class App extends Component {
             <Route
               path="/itinerary"
               render={props => (
-                <Itinerary {...props} createTrip={this.createTrip} />
+                <Itinerary
+                  {...props}
+                  createTrip={this.createTrip}
+                  userId={this.state.currentUser}
+                />
               )}
             />
             <Route path="/newitinerary" component={AddNewItin} />
