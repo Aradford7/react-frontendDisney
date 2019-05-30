@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import { Home } from "./layout/Home/Home";
 import { About } from "./layout/About";
@@ -71,7 +70,7 @@ class App extends Component {
         }
       );
       const response = await registerCall.json();
-      console.log(response, "from the flask server on localhost:8000");
+      console.log(response, "response from registerCall");
       if (response.message === "success") {
         this.setState({
           logged: true,
@@ -85,7 +84,7 @@ class App extends Component {
 
   handleLogin = async data => {
     try {
-      const registerCall = await fetch("http://localhost:8000/users/login", {
+      const loginCall = await fetch("http://localhost:8000/users/login", {
         method: "POST",
         body: JSON.stringify(data),
         credentials: "include",
@@ -93,14 +92,31 @@ class App extends Component {
           "Content-Type": "application/json"
         }
       });
-      const response = await registerCall.json();
-      console.log(response, "from the flask server on localhost:8000");
+      const response = await loginCall.json();
+      console.log(response, "response for loginCall");
       if (response.message === "success") {
         this.setState({
           logged: true,
           currentUser: response.user
         });
       }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  createTrip = async data => {
+    try {
+      const tripCall = await fetch("http://localhost:8000/trips", {
+        method: "POST",
+        body: JSON.stringify(data),
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+      const response = await tripCall.json();
+      console.log(response, "<-- response for createTrip");
     } catch (err) {
       console.log(err);
     }
@@ -116,11 +132,9 @@ class App extends Component {
     }
   };
 
-
-
-  render(){
-  return (
-    <React.Fragment>
+  render() {
+    return (
+      <React.Fragment>
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />

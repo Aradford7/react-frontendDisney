@@ -15,7 +15,8 @@ class Itinerary extends Component {
       modal: false,
       lgShow: false,
       name: "",
-      park: ""
+      park: "",
+      check_in: ""
     };
 
     this.toggle = this.toggle.bind(this);
@@ -83,13 +84,18 @@ class Itinerary extends Component {
                         name="name"
                         type="text"
                         placeholder="Visit name is required."
+                        onChange={this.handleChange}
                       />
                     </Form.Group>
                   </Form.Row>
 
                   <Form.Group as={Col} controlId="formGridPark">
                     <Form.Label>Which theme park are you attending?</Form.Label>
-                    <Form.Control as="select" name="park">
+                    <Form.Control
+                      as="select"
+                      name="park"
+                      onChange={this.handleChange}
+                    >
                       <option>Choose...</option>
                       <option>Disneyland - Anaheim, California</option>
                       <option>
@@ -104,7 +110,7 @@ class Itinerary extends Component {
                   <Form.Row>
                     <Form.Group as={Col} xs={6} controlId="formGridDate">
                       <Form.Label>Which date will ?</Form.Label>
-                      <Calendar />
+                      <Calendar handleChange={this.handleChange} />
                     </Form.Group>
 
                     <Form.Group as={Col} xs={6} controlId="formGridDate">
