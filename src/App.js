@@ -9,9 +9,9 @@ import Itinerary from "./layout/Itinerary/Itinerary";
 import  AddNewItin  from "./layout/AddNewItin/AddNewItin";
 import { Activities } from "./layout/Activities/Activities";
 import { Parks } from "./layout/Parks/Parks";
-import {Disneyland} from './layout/disneyland/disneyland';
-import {Ush} from './layout/ush/ush';
-import {CalAdventures} from './layout/caladventures/caladventures';
+import { Disneyland } from "./layout/disneyland/disneyland";
+import { Ush } from "./layout/ush/ush";
+import { CalAdventures } from "./layout/caladventures/caladventures";
 import { NoMatch } from "./layout/NoMatch";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -50,12 +50,24 @@ class App extends Component {
   state = {
     modal: false,
     logged: false,
-    currentUser: null
+    currentUser: {},
+    userTrips: []
   };
 
-  // componentDidMount() {
-  //   this.getTrips();
-  // }
+  componentDidMount() {
+    const user = localStorage.getItem("current");
+    const parsedUser = JSON.parse(user);
+    if (user) {
+      this.setState(
+        {
+          currentUser: parsedUser
+        },
+        () => {
+          this.getTrips();
+        }
+      );
+    }
+  }
 
   handleRegister = async data => {
     try {
@@ -95,12 +107,18 @@ class App extends Component {
       });
       const response = await loginCall.json();
       console.log(response, "response for loginCall");
-      // if (response.message === "success") {
-      this.setState({
-        logged: true,
-        currentUser: response.user
-      });
-      // }
+      if (response.message === "success") {
+        localStorage.setItem("current", JSON.stringify(response.user));
+        this.setState(
+          {
+            logged: true,
+            currentUser: response.user
+          },
+          () => {
+            this.getTrips();
+          }
+        );
+      }
     } catch (err) {
       console.log(err);
     }
@@ -125,15 +143,29 @@ class App extends Component {
     }
   };
 
-  // getTrips = async () => {
-  //   try {
-  //     const response = await fetch("http://localhost:8000/api/v1/", {
-  //       credentials: "include"
-  //     });
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
+  getTrips = async data => {
+    try {
+      const tripsCall = await fetch(
+        `http://localhost:8000/users/${this.state.currentUser.id}`,
+        {
+          method: "GET",
+          credentials: "include",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }
+      );
+      console.log(tripsCall, "<-- tripsCall in getTrips");
+      const response = await tripsCall.json();
+      console.log(response, "<-- parsed response in getTrips");
+      this.setState({
+        userTrips: response
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   render() {
     return (
