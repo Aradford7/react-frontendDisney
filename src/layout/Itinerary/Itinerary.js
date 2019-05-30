@@ -15,8 +15,7 @@ class Itinerary extends Component {
       modal: false,
       lgShow: false,
       name: "",
-      park: "",
-      check_in: ""
+      park: ""
     };
 
     this.toggle = this.toggle.bind(this);
@@ -32,6 +31,11 @@ class Itinerary extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.createTrip(this.state);
   };
 
   render() {
@@ -124,7 +128,7 @@ class Itinerary extends Component {
                 <Button
                   color="primary"
                   onClick={this.toggle}
-                  href="/newitinerary"
+                  onChange={this.handleSubmit}
                 >
                   Do Something
                 </Button>{" "}

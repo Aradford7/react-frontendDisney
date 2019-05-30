@@ -122,15 +122,15 @@ class App extends Component {
     }
   };
 
-  getTrips = async () => {
-    try {
-      const response = await fetch("http://localhost:8000/api/v1/", {
-        credentials: "include"
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  // getTrips = async () => {
+  //   try {
+  //     const response = await fetch("http://localhost:8000/api/v1/", {
+  //       credentials: "include"
+  //     });
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
   render() {
     return (
@@ -153,7 +153,12 @@ class App extends Component {
               )}
             />
             <Route path="/logout" component={Logout} />
-            <Route path="/itinerary" component={Itinerary} />
+            <Route
+              path="/itinerary"
+              render={props => (
+                <Itinerary {...props} createTrip={this.createTrip} />
+              )}
+            />
             <Route path="/newitinerary" component={AddNewItin} />
             <Route path="/activities" component={Activities} />
             <Route path="/parks" component={Parks} />
