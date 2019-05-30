@@ -30,10 +30,9 @@ class Register extends Component {
     console.log(this.props)
     this.props.history.push( '/itinerary')
   };
- 
+  // const {username, password, handleChange, handleSubmit} = this.state
   //${this.props.currentUser._id}`}
   render(){
-        const {username, password, handleChange, handleSubmit} = this.state
         return(
             <div >
                 <NavBar/>

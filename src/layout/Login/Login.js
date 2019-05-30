@@ -5,7 +5,7 @@ import Parallax from "../Parallax/Parallax";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
-
+import {withRouter} from 'react-router-dom'
 import "./Login.css";
 
 class Login extends Component {
@@ -23,6 +23,8 @@ class Login extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.handleLogin(this.state);
+    console.log(this.props)
+    this.props.history.push( '/itinerary')
   };
 
   render() {
@@ -87,4 +89,4 @@ class Login extends Component {
     );
   }
 }
-export default Login;
+export default  withRouter (Login);

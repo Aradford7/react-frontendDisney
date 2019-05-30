@@ -9,7 +9,9 @@ import Itinerary from "./layout/Itinerary/Itinerary";
 import { AddNewItin } from "./layout/AddNewItin/AddNewItin";
 import { Activities } from "./layout/Activities/Activities";
 import { Parks } from "./layout/Parks/Parks";
-
+import {Disneyland} from './layout/disneyland/disneyland';
+import {Ush} from './layout/ush/ush';
+import {CalAdventures} from './layout/caladventures/caladventures';
 import { NoMatch } from "./layout/NoMatch";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -162,6 +164,9 @@ class App extends Component {
             <Route path="/newitinerary" component={AddNewItin} />
             <Route path="/activities" component={Activities} />
             <Route path="/parks" component={Parks} />
+            <Route path="/disneyland" component={Disneyland} />
+            <Route path="/caladventures" component={CalAdventures} />
+            <Route path="/ush" component={Ush} />
             <Route component={NoMatch} />
           </Switch>
         </Router>
