@@ -128,7 +128,7 @@ class Itinerary extends Component {
                 <Button
                   color="primary"
                   onClick={this.toggle}
-                  onChange={this.handleSubmit}
+                  onClick={this.handleSubmit}
                 >
                   Do Something
                 </Button>{" "}

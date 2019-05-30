@@ -52,9 +52,9 @@ class App extends Component {
     currentUser: null
   };
 
-  componentDidMount() {
-    this.getTrips();
-  }
+  // componentDidMount() {
+  //   this.getTrips();
+  // }
 
   handleRegister = async data => {
     try {
@@ -107,7 +107,7 @@ class App extends Component {
 
   createTrip = async data => {
     try {
-      const tripCall = await fetch("http://localhost:8000/trips", {
+      const tripCall = await fetch("http://localhost:8000/api/v1/trips", {
         method: "POST",
         body: JSON.stringify(data),
         credentials: "include",
