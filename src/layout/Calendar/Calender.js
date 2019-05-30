@@ -8,7 +8,7 @@ export default class Calendar extends React.Component {
     super(props);
     this.handleDayClick = this.handleDayClick.bind(this);
     this.state = {
-      selectedDay: undefined,
+      selectedDay: " ",
     };
   }
   handleDayClick(day) {

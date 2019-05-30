@@ -15,6 +15,7 @@ class Itinerary extends Component {
     this.state = {
       modal: false,
       lgShow: false,
+  
     };
 
     this.toggle = this.toggle.bind(this);
