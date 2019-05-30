@@ -21,7 +21,7 @@ export default class Calendar extends React.Component {
           name="check_in"
           onDayClick={this.handleDayClick}
           selectedDays={this.state.selectedDay}
-          onChange={this.props.handleChange}
+          onDayChange={this.props.handleDayChange}
         />
         {this.state.selectedDay ? (
           <p>You clicked {this.state.selectedDay.toLocaleDateString()}</p>

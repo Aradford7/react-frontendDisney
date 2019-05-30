@@ -5,6 +5,8 @@ import Footer from "../Footer/Footer";
 import Form from "react-bootstrap/Form";
 import Calendar from "../Calendar/Calender";
 import { Container, Row, Col } from "react-bootstrap";
+import DayPicker from "react-day-picker";
+import "react-day-picker/lib/style.css";
 
 import "./Itinerary.css";
 
@@ -15,7 +17,8 @@ class Itinerary extends Component {
       modal: false,
       lgShow: false,
       name: "",
-      park: ""
+      park: "",
+      selectedDay: undefined
     };
 
     this.toggle = this.toggle.bind(this);
@@ -37,6 +40,16 @@ class Itinerary extends Component {
     e.preventDefault();
     this.props.createTrip(this.state);
   };
+
+  handleDayChange(selectedDay, modifiers, dayPickerInput) {
+    const input = dayPickerInput.getInput();
+    this.setState({
+      selectedDay,
+      isEmpty: !input.value.trim(),
+      isValidDay: typeof selectedDay !== "undefined",
+      isDisabled: modifiers.disabled === true
+    });
+  }
 
   render() {
     const lgClose = () => this.setState({ lgShow: false });
@@ -114,7 +127,7 @@ class Itinerary extends Component {
                   <Form.Row>
                     <Form.Group as={Col} xs={6} controlId="formGridDate">
                       <Form.Label>Which date will ?</Form.Label>
-                      <Calendar handleChange={this.handleChange} />
+                      <Calendar handleDayChange={this.handleDayChange} />
                     </Form.Group>
 
                     <Form.Group as={Col} xs={6} controlId="formGridDate">
