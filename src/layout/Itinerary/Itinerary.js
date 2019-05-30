@@ -132,6 +132,7 @@ class Itinerary extends Component {
                   <Form.Row>
                     <Form.Group as={Col} xs={6} controlId="formGridDate">
                       <Form.Label>Which date will ?</Form.Label>
+
                       <DayPicker
                         onDayClick={this.handleDayClick}
                         selectedDays={this.state.selectedDay}
@@ -145,11 +146,6 @@ class Itinerary extends Component {
                       ) : (
                         <p>Please select a day.</p>
                       )}
-                    </Form.Group>
-
-                    <Form.Group as={Col} xs={6} controlId="formGridDate">
-                      <Form.Label>Check-out Date</Form.Label>
-                      {/* <Calendar /> */}
                     </Form.Group>
                   </Form.Row>
                 </Form>
