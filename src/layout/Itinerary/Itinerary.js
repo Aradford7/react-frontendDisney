@@ -70,12 +70,12 @@ class Itinerary extends Component {
 
             <Form.Row>
               <Form.Group as={Col}  xs = {6} controlId="formGridDate">
-                  <Form.Label>Which date will ?</Form.Label>
+                  <Form.Label>Check-in Date.</Form.Label>
                   <Calendar/>
               </Form.Group>
               
               <Form.Group as={Col} xs = {6} controlId="formGridDate">
-                  <Form.Label>Check-out Date</Form.Label>
+                  <Form.Label>Check-out Date.</Form.Label>
                   <Calendar/>
               </Form.Group>
           </Form.Row>
