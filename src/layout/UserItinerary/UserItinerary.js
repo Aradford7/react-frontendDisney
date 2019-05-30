@@ -1,16 +1,18 @@
-import React from 'react'
+import React from "react";
 
- class UserItinerary extends React.Component{
-    state = {
-    
-      };
-      render(){
-          return(
-          <div>
-                Hi this is the UserItinerary Component
-          </div>
-          )
-      }
+class UserItinerary extends React.Component {
+  render() {
+    return this.props.userTrips.map((trip, i) => {
+      console.log(this.props.userTrips, "this.props.userTrips");
+      return (
+        <li key={i}>
+          <span>Name: {trip.name}</span>
+          <br />
+          <span>Park: {trip.park}</span>
+        </li>
+      );
+    });
+  }
 }
 
-export default UserItinerary
+export default UserItinerary;
