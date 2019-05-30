@@ -6,7 +6,7 @@ import Login from "./layout/Login/Login";
 import Register from "./layout/Register/Register";
 import { Logout } from "./layout/Logout";
 import Itinerary from "./layout/Itinerary/Itinerary";
-import  AddNewItin  from "./layout/AddNewItin/AddNewItin";
+import AddNewItin from "./layout/AddNewItin/AddNewItin";
 import { Activities } from "./layout/Activities/Activities";
 import { Parks } from "./layout/Parks/Parks";
 import { Disneyland } from "./layout/disneyland/disneyland";
@@ -195,6 +195,7 @@ class App extends Component {
                   {...props}
                   createTrip={this.createTrip}
                   userId={this.state.currentUser}
+                  userTrips={this.state.userTrips}
                 />
               )}
             />

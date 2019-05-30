@@ -83,9 +83,9 @@ class Itinerary extends Component {
 
         <div className="Modal">
           <h1> Create A New Itinerary</h1>
-          
-          <div className = "User">
-          <UserItinerary/>
+
+          <div className="User">
+            <UserItinerary userTrips={this.props.userTrips} />
           </div>
 
           <div className="formModal">
@@ -177,10 +177,6 @@ class Itinerary extends Component {
             will need to render a component that list previous itineraries and
             able to delete overrall array maybe
           </p>
-
-
-          
-
 
           <Button>Delete</Button>
         </div>
