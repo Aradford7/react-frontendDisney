@@ -4,7 +4,7 @@ import { About } from "./layout/About";
 import { Contact } from "./layout/Contact/Contact";
 import Login from "./layout/Login/Login";
 import Register from "./layout/Register/Register";
-import { Logout } from "./layout/Logout";
+import Logout from "./layout/Logout";
 import Itinerary from "./layout/Itinerary/Itinerary";
 import AddNewItin from "./layout/AddNewItin/AddNewItin";
 import { Activities } from "./layout/Activities/Activities";
@@ -14,6 +14,7 @@ import { Ush } from "./layout/ush/ush";
 import { CalAdventures } from "./layout/caladventures/caladventures";
 import { NoMatch } from "./layout/NoMatch";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NavBar from "./layout/NavBar/NavBar";
 
 //import * as routes from './constants/routes'
 ////////STYLING STUFF//////////
@@ -180,6 +181,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Router>
+          <NavBar logged={this.state.logged} />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
@@ -214,6 +216,10 @@ class App extends Component {
             <Route path="/disneyland" component={Disneyland} />
             <Route path="/caladventures" component={CalAdventures} />
             <Route path="/ush" component={Ush} />
+            <Route
+              path="/logout"
+              render={props => <Logout {...props} doLogout={this.doLogout} />}
+            />
             <Route component={NoMatch} />
           </Switch>
         </Router>
