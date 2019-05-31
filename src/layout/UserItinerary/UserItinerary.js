@@ -1,6 +1,5 @@
 import React from "react";
-
-
+import { Button, Toast, ToastBody, ToastHeader } from 'reactstrap';
 
 // class UserItinerary extends React.Component {
 //   render() {
@@ -24,9 +23,6 @@ import React from "react";
 // }
 
 // export default UserItinerary;
-
-
-import { Button, Toast, ToastBody, ToastHeader } from 'reactstrap';
 
 class UserItinerary extends React.Component {
   constructor(props) {
@@ -53,9 +49,10 @@ class UserItinerary extends React.Component {
       <div>
         <Button color="light" key={i} onClick={this.toggle}>{this.props.buttonLabel}Itinerary # {i}  </Button>
         <Toast isOpen={this.state.show}>
-          <ToastHeader toggle={this.toggle}>Toast title</ToastHeader>
+          <ToastHeader toggle={this.toggle}><span>Name: {trip.name}</span></ToastHeader>
           <ToastBody>
-          <span>Name: {trip.name}</span><br /><span>Park: {trip.park}</span><br />
+          <span>Park: {trip.park}</span>
+          < Button href = '/newitinerary'>Add Rides</Button>
           </ToastBody>
         </Toast>
       </div>

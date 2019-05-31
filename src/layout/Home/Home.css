@@ -39,14 +39,14 @@
     padding: 25px;
     margin: 10px;
 }
-.colAndriod{
+.colGithub{
     height : 400px;
     width: 400px;
     padding: 50px;
   
     text-align: center;
 }
-.colApple{
+.colGithub{
     height : 400px;
     width: 400px;
     padding: 50px;
@@ -61,4 +61,9 @@
 }
 a{
     position: center;
+}
+
+.atag{
+    position:relative;
+    left: 33%;
 }

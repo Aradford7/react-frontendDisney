@@ -1,4 +1,4 @@
-                    const rides = ["Choose...",
+                    const rides = [
                      "Alice in Wonderland",
                      "Astro Orbitor",
                      "Autopia",

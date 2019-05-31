@@ -4,7 +4,10 @@
     height: 250px;
 }
 
-.User{
+/* .User{
     border : 5px solid black;
     background: dodgerblue;
+} */
+.Modal{
+    position: center;
 }

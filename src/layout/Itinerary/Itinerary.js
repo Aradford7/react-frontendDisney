@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import Form from "react-bootstrap/Form";
 // import UserItinerary from '../UserItinerary/UserItinerary'
@@ -77,9 +76,6 @@ class Itinerary extends Component {
         <h2>My Itineraries</h2>
         <p>Welcome! You have no itineraries yet</p>
         <p>
-          {" "}
-          This should be the Itinarary show page for an Individual User after
-          they logged in
         </p>
 
         <div className="Modal">
@@ -162,7 +158,7 @@ class Itinerary extends Component {
                   onClick={this.toggle}
                   onClick={this.handleSubmit}
                 >
-                  Do Something
+                  Create
                 </Button>{" "}
                 <Button color="secondary" onClick={this.toggle}>
                   Cancel
@@ -173,11 +169,7 @@ class Itinerary extends Component {
         </div>
 
         <div>
-          <p>
-            if there was any items already in user array show on this page, this
-            will need to render a component that list previous itineraries and
-            able to delete overrall array maybe
-          </p>
+          
 
           <Button>Delete</Button>
         </div>

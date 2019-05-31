@@ -7,7 +7,7 @@ import Register from "./layout/Register/Register";
 import Logout from "./layout/Logout";
 import Itinerary from "./layout/Itinerary/Itinerary";
 import AddNewItin from "./layout/AddNewItin/AddNewItin";
-import { Activities } from "./layout/Activities/Activities";
+import ShowItin from "./layout/ShowItin/ShowItin";
 import { Parks } from "./layout/Parks/Parks";
 import { Disneyland } from "./layout/disneyland/disneyland";
 import { Ush } from "./layout/ush/ush";
@@ -32,7 +32,8 @@ import {
 import {
   faGithubAlt,
   faApple,
-  faAndroid
+  faAndroid,
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
@@ -43,6 +44,7 @@ library.add(
   faGithubAlt,
   faApple,
   faAndroid,
+  faLinkedin,
   fab
 );
 
@@ -212,7 +214,7 @@ class App extends Component {
               )}
             />
             <Route path="/newitinerary" component={AddNewItin} />
-            <Route path="/activities" component={Activities} />
+            <Route path="/show" component={ShowItin} />
             <Route path="/parks" component={Parks} />
             <Route path="/disneyland" component={Disneyland} />
             <Route path="/caladventures" component={CalAdventures} />

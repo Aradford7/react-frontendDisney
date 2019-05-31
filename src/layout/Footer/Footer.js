@@ -45,13 +45,13 @@ export const Footer = () => (
               </a>
             </li>
             <li>
-              <a className="link" href="#!">
-                Link 3
+              <a className="link" href="/#!">
+              Heroku
               </a>
             </li>
             <li>
-              <a className="link" href="#!">
-                Link 4
+              <a className="link" href="/#!">
+               Future Implementations
               </a>
             </li>
           </ul>
@@ -78,8 +78,8 @@ export const Footer = () => (
               </a>
             </li>
             <li>
-              <a className="link" href="#!">
-                Link 4
+              <a className="link" href="/show">
+                ShowItin
               </a>
             </li>
           </ul>
@@ -88,7 +88,7 @@ export const Footer = () => (
     </div>
     <Row className="footerrow">
       <Col lg={true}>
-        <div class="footer-copyright text-center py-3">© Copyright 2019</div>
+        <div class="footer-copyright text-center py-3">© Copyright 2019: Created by: Chase Lancaster and Ashley Radford</div>
       </Col>
     </Row>
   </footer>

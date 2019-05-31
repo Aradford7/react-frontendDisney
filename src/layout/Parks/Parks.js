@@ -1,13 +1,13 @@
 import React from "react";
 
-import NavBar from "../NavBar/NavBar";
+
 import Footer from "../Footer/Footer";
 import { Row, Col, Card, Image } from "react-bootstrap";
 
 export const Parks = () => (
   <div>
-    {/* <NavBar/> */}
-    <h2>Parks PAGE </h2>
+  
+   
     <div class="pics">
       <Row lg={true}>
         <Col md={4} aria-label="first group">
