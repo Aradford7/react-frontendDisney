@@ -57,7 +57,7 @@ class NavBar extends Component {
               <NavLink key={1}>
                 <ButtonToolbar>
                   <ButtonGroup aria-label="Second group">
-                    <Button>LOGOUT</Button>
+                    <Button onClick={this.props.doLogout}>LOGOUT</Button>
                   </ButtonGroup>
                 </ButtonToolbar>
               </NavLink>

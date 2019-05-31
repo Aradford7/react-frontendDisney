@@ -173,7 +173,8 @@ class App extends Component {
     localStorage.clear();
     this.setState({
       currentUser: null,
-      logged: false
+      logged: false,
+      userTrips: []
     });
   };
 
@@ -181,7 +182,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Router>
-          <NavBar logged={this.state.logged} />
+          <NavBar logged={this.state.logged} doLogout={this.doLogout} />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />

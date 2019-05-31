@@ -39,8 +39,11 @@ class Itinerary extends Component {
   };
 
   handleSubmit = e => {
-    e.preventDefault();
+    // e.preventDefault();
     this.props.createTrip(this.state);
+    this.setState({
+      modal: false
+    });
   };
 
   handleDayClick(day, { selected, disabled }) {
