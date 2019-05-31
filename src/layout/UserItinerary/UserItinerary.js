@@ -45,6 +45,7 @@ class UserItinerary extends React.Component {
         if (this.props.userTrips) {
         return this.props.userTrips.map((trip, i) => {
         console.log(this.props.userTrips, "this.props.userTrips");
+
     return (
       <div>
         <Button color="light" key={i} onClick={this.toggle}>{this.props.buttonLabel}Itinerary # {i}  </Button>
@@ -56,6 +57,12 @@ class UserItinerary extends React.Component {
           </ToastBody>
         </Toast>
       </div>
+
+       
+            <button onClick={() => this.props.deleteTrip(trip.id)}>
+              Delete Trip
+            </button>
+          </li>
         );
       });
     }

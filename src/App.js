@@ -35,6 +35,7 @@ import {
   faAndroid,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { async } from "q";
 
 library.add(
   faHamburger,
@@ -180,6 +181,16 @@ class App extends Component {
     });
   };
 
+  deleteTrip = async id => {
+    await fetch(`http://localhost:8000/api/v1/trips/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application"
+      }
+    });
+    this.getTrips();
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -210,6 +221,8 @@ class App extends Component {
                   createTrip={this.createTrip}
                   userId={this.state.currentUser}
                   userTrips={this.state.userTrips}
+                  deleteTrip={this.deleteTrip}
+                  getTrips={this.getTrips}
                 />
               )}
             />

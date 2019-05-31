@@ -82,7 +82,11 @@ class Itinerary extends Component {
           <h1> Create A New Itinerary</h1>
 
           <div className="User">
-            <UserItinerary userTrips={this.props.userTrips} />
+            <UserItinerary
+              userTrips={this.props.userTrips}
+              deleteTrip={this.props.deleteTrip}
+              getTrips={this.props.getTrips}
+            />
           </div>
 
           <div className="formModal">
