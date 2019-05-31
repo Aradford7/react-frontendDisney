@@ -5,7 +5,6 @@ import Button from "react-bootstrap/Button";
 import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import {Container, Row, Col} from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Calender from "./Calendar/Calender";
 
 export const About = () => (
   <div>

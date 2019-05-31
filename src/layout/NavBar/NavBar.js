@@ -44,9 +44,20 @@ class NavBar extends Component {
               {" "}
               <Nav.Link href="/show">My Itinerary</Nav.Link>
             </NavLink>
-            <NavLink to={routes.REGISTER} activeClassName="selected">
+
+            <NavLink to={routes.PROFILE} activeClassName="selected">
               <ButtonToolbar>
                 <ButtonGroup className="mr-2" aria-label="First group">
+                  <Button class="btn" href="/profile">
+                    PROFILE
+                  </Button>
+                </ButtonGroup>
+              </ButtonToolbar>
+            </NavLink>
+
+            <NavLink to={routes.REGISTER} activeClassName="selected">
+              <ButtonToolbar>
+                <ButtonGroup className="mr-2" aria-label="Second group">
                   <Button class="btn" href="/register">
                     REGISTER
                   </Button>
@@ -65,7 +76,7 @@ class NavBar extends Component {
               [
                 <NavLink to={"/login"} activeClassName="selected">
                   <ButtonToolbar>
-                    <ButtonGroup aria-label="Second group">
+                    <ButtonGroup aria-label="Third group">
                       <Button href="/login">LOGIN</Button>
                     </ButtonGroup>
                   </ButtonToolbar>

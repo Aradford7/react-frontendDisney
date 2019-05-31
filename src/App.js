@@ -4,6 +4,7 @@ import { About } from "./layout/About";
 import { Contact } from "./layout/Contact/Contact";
 import Login from "./layout/Login/Login";
 import Register from "./layout/Register/Register";
+import Profile from "./layout/Profile/Profile"
 import Logout from "./layout/Logout";
 import Itinerary from "./layout/Itinerary/Itinerary";
 import AddNewItin from "./layout/AddNewItin/AddNewItin";
@@ -200,6 +201,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
+            <Route path = "/profile" component = {Profile}/>
             <Route
               path="/login"
               render={props => (
