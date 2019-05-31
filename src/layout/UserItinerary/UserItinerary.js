@@ -10,6 +10,8 @@ class UserItinerary extends React.Component {
             <span>Name: {trip.name}</span>
             <br />
             <span>Park: {trip.park}</span>
+            <br />
+            <button>Delete Trip</button>
           </li>
         );
       });
