@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";

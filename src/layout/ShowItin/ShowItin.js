@@ -4,24 +4,18 @@ import {
   Container,
   Row,
   Col,
-  Button,
   Form
 } from "react-bootstrap";
 import "../AddNewItin/AddNewItin.css";
 import Rides from "../disneyland/rides";
 
-export default class AddNewItin extends React.Component {
+export default class ShowItin extends React.Component {
   render() {
     return (
       <div>
-        {/* <NavBar/> */}
-
         <div class="container">
-          <h2>Hello World</h2>
-          <p>This is the New Intieray page Page</p>
-          <p>
-            Listed items from API or w/e user needs to add to their itinerary
-          </p>
+          <h2>Showing Current Itinerary</h2>
+          <p>This is the Show Updated Current Itinerary</p>
 
           <Container>
             <Row>
@@ -90,21 +84,21 @@ export default class AddNewItin extends React.Component {
 
                 <Row>
                   <Form.Group as={Col} controlId="formGridPark">
-                    <Form.Control
+                    <Form.Label
                       as="select"
                       name="park"
                       onChange={this.handleChange}
                     >
                       {Rides.map((r, i) => {
-                        return <option>{r}</option>;
+                        return <div>{r}</div>;
                       })}
-                    </Form.Control>
+                    </Form.Label>
                   </Form.Group>
                 </Row>
 
                 <Row>
                   <Form.Group as={Col} controlId="formGridPark">
-                    <Form.Control
+                    {/* <Form.Control
                       as="select"
                       name="park"
                       onChange={this.handleChange}
@@ -112,13 +106,13 @@ export default class AddNewItin extends React.Component {
                       {Rides.map((r, i) => {
                         return <option>{r}</option>;
                       })}
-                    </Form.Control>
+                    </Form.Control> */}
                   </Form.Group>
                 </Row>
 
                 <Row>
                   <Form.Group as={Col} controlId="formGridPark">
-                    <Form.Control
+                    {/* <Form.Control
                       as="select"
                       name="park"
                       onChange={this.handleChange}
@@ -126,13 +120,13 @@ export default class AddNewItin extends React.Component {
                       {Rides.map((r, i) => {
                         return <option>{r}</option>;
                       })}
-                    </Form.Control>
+                    </Form.Control> */}
                   </Form.Group>
                 </Row>
 
                 <Row>
                   <Form.Group as={Col} controlId="formGridPark">
-                    <Form.Control
+                    {/* <Form.Control
                       as="select"
                       name="park"
                       onChange={this.handleChange}
@@ -140,13 +134,13 @@ export default class AddNewItin extends React.Component {
                       {Rides.map((r, i) => {
                         return <option>{r}</option>;
                       })}
-                    </Form.Control>
+                    </Form.Control> */}
                   </Form.Group>
                 </Row>
 
                 <Row>
                   <Form.Group as={Col} controlId="formGridPark">
-                    <Form.Control
+                    {/* <Form.Control
                       as="select"
                       name="park"
                       onChange={this.handleChange}
@@ -154,13 +148,13 @@ export default class AddNewItin extends React.Component {
                       {Rides.map((r, i) => {
                         return <option>{r}</option>;
                       })}
-                    </Form.Control>
+                    </Form.Control> */}
                   </Form.Group>
                 </Row>
 
                 <Row>
                   <Form.Group as={Col} controlId="formGridPark">
-                    <Form.Control
+                    {/* <Form.Control
                       as="select"
                       name="park"
                       onChange={this.handleChange}
@@ -168,13 +162,13 @@ export default class AddNewItin extends React.Component {
                       {Rides.map((r, i) => {
                         return <option>{r}</option>;
                       })}
-                    </Form.Control>
+                    </Form.Control> */}
                   </Form.Group>
                 </Row>
 
                 <Row>
                   <Form.Group as={Col} controlId="formGridPark">
-                    <Form.Control
+                    {/* <Form.Control
                       as="select"
                       name="park"
                       onChange={this.handleChange}
@@ -182,13 +176,13 @@ export default class AddNewItin extends React.Component {
                       {Rides.map((r, i) => {
                         return <option>{r}</option>;
                       })}
-                    </Form.Control>
+                    </Form.Control> */}
                   </Form.Group>
                 </Row>
 
                 <Row>
                   <Form.Group as={Col} controlId="formGridPark">
-                    <Form.Control
+                    {/* <Form.Control
                       as="select"
                       name="park"
                       onChange={this.handleChange}
@@ -196,13 +190,13 @@ export default class AddNewItin extends React.Component {
                       {Rides.map((r, i) => {
                         return <option>{r}</option>;
                       })}
-                    </Form.Control>
+                    </Form.Control> */}
                   </Form.Group>
                 </Row>
 
                 <Row>
                   <Form.Group as={Col} controlId="formGridPark">
-                    <Form.Control
+                    {/* <Form.Control
                       as="select"
                       name="park"
                       onChange={this.handleChange}
@@ -210,13 +204,13 @@ export default class AddNewItin extends React.Component {
                       {Rides.map((r, i) => {
                         return <option>{r}</option>;
                       })}
-                    </Form.Control>
+                    </Form.Control> */}
                   </Form.Group>
                 </Row>
 
                 <Row>
                   <Form.Group as={Col} controlId="formGridPark">
-                    <Form.Control
+                    {/* <Form.Control
                       as="select"
                       name="park"
                       onChange={this.handleChange}
@@ -224,13 +218,13 @@ export default class AddNewItin extends React.Component {
                       {Rides.map((r, i) => {
                         return <option>{r}</option>;
                       })}
-                    </Form.Control>
+                    </Form.Control> */}
                   </Form.Group>
                 </Row>
 
                 <Row>
                   <Form.Group as={Col} controlId="formGridPark">
-                    <Form.Control
+                    {/* <Form.Control
                       as="select"
                       name="park"
                       onChange={this.handleChange}
@@ -238,12 +232,11 @@ export default class AddNewItin extends React.Component {
                       {Rides.map((r, i) => {
                         return <option>{r}</option>;
                       })}
-                    </Form.Control>
+                    </Form.Control> */}
                   </Form.Group>
                 </Row>
               </Col>
             </Row>
-            <Button href = '/show'>Submit</Button>
           </Container>
 
           <br />

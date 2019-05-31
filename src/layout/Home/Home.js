@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../../layout/NavBar/NavBar";
 import Carosel from "../../layout/Carosel/Carosel";
 import Footer from "../../layout/Footer/Footer";
 import Container from "react-bootstrap/Container";
@@ -17,7 +16,6 @@ import "./Home.css";
 
 export const Home = () => (
   <div>
-    {/* <NavBar/> */}
     <Carosel />
     <div class="container">
       <br />
@@ -114,24 +112,28 @@ export const Home = () => (
             <Container>
               <Row>
                 <Col md={6} aria-label="first group">
-                  <div class="colAndriod">
+                  <div class="colGithub">
                     <FontAwesomeIcon
-                      icon={["fab", "android"]}
+                      icon={["fab", "github"]}
                       size="6x"
                       style={{ color: "white" }}
                     />
-                    <h4>Android App</h4>
+                    <Row>
+                    <a  className="atag" style ={{color:"black"}} href='/https://github.com/chaselancaster/flask-api-themeparks-v2'>Flask Back-End</a>
+                    </Row>
                   </div>
                 </Col>
 
                 <Col md={6} aria-label="second group">
-                  <div class="colApple">
+                  <div class="colGithub">
                     <FontAwesomeIcon
-                      icon={["fab", "apple"]}
+                      icon={["fab", "github"]}
                       size="6x"
                       style={{ color: "white" }}
                     />
-                    <h4>IOS App</h4>
+                    <Row>
+                    <a  className = "atag" style ={{color:"black"}}  href ='/https://github.com/Aradford7/react-frontendDisney'>React Front-End</a>
+                    </Row>
                   </div>
                 </Col>
               </Row>

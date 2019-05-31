@@ -39,7 +39,7 @@ export const Carosel= () =>(
       className="d-block w-100"
       width = "839 px"
       height = "618px"
-      src="https://wallpaperplay.com/walls/full/b/a/7/144244.jpg"
+      src="https://stmed.net/sites/default/files/disneyland-wallpapers-28549-4277979.jpg"
       alt="Third slide"
     />
 

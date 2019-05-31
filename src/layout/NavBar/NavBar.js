@@ -40,9 +40,9 @@ class NavBar extends Component {
                 Parks
               </Nav.Link>
             </NavLink>
-            <NavLink to={routes.TODO} activeClassName="selected">
+            <NavLink to={routes.SHOW} activeClassName="selected">
               {" "}
-              <Nav.Link href="/activities">Things to Do</Nav.Link>
+              <Nav.Link href="/show">My Itinerary</Nav.Link>
             </NavLink>
             <NavLink to={routes.REGISTER} activeClassName="selected">
               <ButtonToolbar>

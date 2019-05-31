@@ -1,6 +1,6 @@
 export const HOME = '/'
 export const PARKS = '/parks'
-export const TODO = '/activities'
+export const SHOW = '/show'
 export const LOGIN = '/login'
 export const REGISTER = '/register'
 export const ITINERARY = '/itinerary'
