@@ -11,7 +11,9 @@ class UserItinerary extends React.Component {
             <br />
             <span>Park: {trip.park}</span>
             <br />
-            <button>Delete Trip</button>
+            <button onClick={() => this.props.deleteTrip(trip.id)}>
+              Delete Trip
+            </button>
           </li>
         );
       });
