@@ -12,7 +12,7 @@ export const Carosel= () =>(
       className="d-block w-100"
       width = "839 px"
       height = "618px"
-      src="https://secure.cdn1.wdpromedia.com/resize/mwImage/1/640/360/75/dam/wdpro-assets/dlr/gallery/destinations/disneyland-park/disneyland-gallery00.jpg"
+      src="https://secure.cdn1.wdpromedia.com/resize/mwImage/1/1860/821/75/wdpromedia.disney.go.com/media/wdpro-assets/dlr/parks-and-tickets/special-events/bravissimo/images/DLR_Bravissimo_FINAL_DESKTOP.png"
       alt="First slide"
     />
     <Carousel.Caption>
@@ -39,7 +39,7 @@ export const Carosel= () =>(
       className="d-block w-100"
       width = "839 px"
       height = "618px"
-      src="https://i.ytimg.com/vi/Gu7a6et4a-U/maxresdefault.jpg"
+      src="https://wallpaperplay.com/walls/full/b/a/7/144244.jpg"
       alt="Third slide"
     />
 

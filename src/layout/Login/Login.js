@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import NavBar from "../NavBar/NavBar";
+//import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
-import Parallax from "../Parallax/Parallax";
+import { Parallax } from "react-parallax";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
@@ -31,9 +31,16 @@ class Login extends Component {
     return (
       <div className="loginpg">
         {/* <NavBar /> */}
-        <Parallax />
 
-        <div class="container">
+        <Parallax
+          blur={0}
+          bgImage={require("../Parallax/images/6.jpg")}
+          bgImageAlt=""
+          strength={200}
+        >
+          <div style={{ height: "500px" }} />
+        </Parallax>
+
           <div class="logincontainer">
             <br />
             <h2>Log in</h2>
@@ -80,7 +87,16 @@ class Login extends Component {
               </Button>
             </Form>
           </div>
-        </div>
+        
+
+        <Parallax
+          blur={0}
+          bgImage={require("../Parallax/images/8.jpg")}
+          bgImageAlt=""
+          strength={200}
+        >
+          <div style={{ height: "500px" }} />
+        </Parallax>
 
         <div>
           <Footer />
