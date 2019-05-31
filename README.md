@@ -1,3 +1,38 @@
+# Amusement Park Planner
+
+### Created By: Chase Lancaster and Ashley Radford
+
+## Description
+* Can create a user or login and create a trip to a theme park destination .
+* Users can create, see, and delete their trips .
+* Users can also update their profile.
+
+## Demo our site here: url
+
+ Preview: ![preview]()
+
+## Plans and Wireframing
+ Our Wireframe
+    ![preview]()
+    
+## Technologies Used:
+* HTML5 and CSS, Javascript
+* React
+* Flask
+* sqLite
+* Express-Session and Bcrypt
+* React Bootstrap4, Reactstrap, React-Date-picker, React-parallax, font-awesome library,
+* Deployment to Heroku
+
+## Future Implements
+* Users can be directed to the itinerary page and able to add rides to their itinerary.
+* Users are able to see their finalized itinerary and able to update it.
+* Implementing Theme-parks-api to be able to project wait-times, rides list, and more information from other amusement parks.
+
+## Bugs
+* localhost:3000 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
