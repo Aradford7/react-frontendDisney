@@ -8,10 +8,36 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const About = () => (
   <div>
-    <h1>Hello World!</h1>
-        <h3>Technologies Used:</h3>
-        <h5>React  Flask  sqLite  </h5>
+    <div class = "readme" style ={{margin:"100px"}} >
+    <h1>Hello World!</h1> <br/>
+    <h2>Amusement Park Planner</h2> 
+    <h3>Created By: Chase Lancaster and Ashley Radford</h3>
 
+    <h3>Description</h3>
+    <p>Can create a user or login and create a trip to a theme park destination.<br/>
+      Users can create, see, and delete their trips.
+      Users can also update their profile. <br/></p>
+
+
+    <h3>Plans and Wireframing</h3>
+
+    <h3>Technologies Used:</h3>
+    <li> HTML5 and CSS, Javascript</li>
+    <li> React</li>
+    <li>Flask</li>
+    <li>sqLite</li>
+    <li>Express-Session and Bcrypt</li>
+    <li>React Bootstrap4, Reactstrap, React-Date-picker, React-parallax, font-awesome library,</li>
+
+    <h3>Future Implements</h3>
+    <li>Users can be directed to the itinerary page and able to add rides to their itinerary.</li>
+    <li>Users are able to see their finalized itinerary and able to update it.</li>
+    <li>Implementing Theme-parks-api to be able to project wait-times, rides list, and more information from other amusement parks.</li>
+
+    <h3>Bugs</h3>
+    <li>minor update needs to be refreshed</li>
+    <li>Run on Localhost:3000</li>
+    </div>
 
     <div class="hero">
       <Container>
