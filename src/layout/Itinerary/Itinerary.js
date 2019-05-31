@@ -69,9 +69,7 @@ class Itinerary extends Component {
     );
     return (
       <div>
-        <div>
-          <NavBar />
-        </div>
+        <div>{/* <NavBar /> */}</div>
 
         <h2>My Itineraries</h2>
         <p>Welcome! You have no itineraries yet</p>
