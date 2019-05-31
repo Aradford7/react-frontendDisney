@@ -192,6 +192,24 @@ class App extends Component {
     this.getTrips();
   };
 
+  editUser = async id => {
+    try {
+      const editCall = await fetch(`http://localhost:8000/users/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application"
+        }
+      });
+      const response = await editCall.json();
+      console.log(response, "<-- response for editUser");
+      this.setState({
+        currentUser: response.user
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -204,7 +222,11 @@ class App extends Component {
             <Route
               path="/profile"
               render={props => (
-                <Profile {...props} currentUser={this.state.currentUser} />
+                <Profile
+                  {...props}
+                  currentUser={this.state.currentUser}
+                  editUser={this.editUser}
+                />
               )}
             />
             <Route
