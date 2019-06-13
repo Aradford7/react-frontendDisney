@@ -73,12 +73,10 @@ class App extends Component {
       );
     }
   }
-
+// fetch(process.env.REACT_APP_BACKEND_URL + '/users/registration', {
   handleRegister = async data => {
     try {
-      const registerCall = await fetch(
-        "http://localhost:8000/users/registration",
-        {
+      const registerCall = await fetch(process.env.REACT_APP_BACKEND_URL + '/users/registration',{
           method: "POST",
           body: JSON.stringify(data),
           credentials: "include",
@@ -102,7 +100,7 @@ class App extends Component {
 
   handleLogin = async data => {
     try {
-      const loginCall = await fetch("http://localhost:8000/users/login", {
+      const loginCall = await fetch(process.env.REACT_APP_BACKEND_URL + '/users/login', {
         method: "POST",
         body: JSON.stringify(data),
         credentials: "include",
@@ -131,7 +129,7 @@ class App extends Component {
 
   createTrip = async data => {
     try {
-      const tripCall = await fetch("http://localhost:8000/api/v1/trips", {
+      const tripCall = await fetch(process.env.REACT_APP_BACKEND_URL + '/api/v1/trips', {
         method: "POST",
         body: JSON.stringify(
           Object.assign(data, { userId: this.state.currentUser.id })
@@ -150,8 +148,7 @@ class App extends Component {
 
   getTrips = async data => {
     try {
-      const tripsCall = await fetch(
-        `http://localhost:8000/users/${this.state.currentUser.id}`,
+      const tripsCall = await fetch(process.env.REACT_APP_BACKEND_URL + '/users/${this.state.currentUser.id}',
         {
           method: "GET",
           credentials: "include",
@@ -173,7 +170,7 @@ class App extends Component {
   };
 
   doLogout = async () => {
-    await fetch("http://localhost:8000/users/logout");
+    await fetch(process.env.REACT_APP_BACKEND_URL + '/users/logout');
     localStorage.clear();
     this.setState({
       currentUser: null,
@@ -183,7 +180,7 @@ class App extends Component {
   };
 
   deleteTrip = async id => {
-    await fetch(`http://localhost:8000/api/v1/trips/${id}`, {
+    await fetch(process.env.REACT_APP_BACKEND_URL + '/api/v1/trips/${id}', {
       method: "DELETE",
       headers: {
         "Content-Type": "application"
@@ -194,7 +191,7 @@ class App extends Component {
 
   editUser = async id => {
     try {
-      const editCall = await fetch(`http://localhost:8000/users/${id}`, {
+      const editCall = await fetch(process.env.REACT_APP_BACKEND_URL + '/users/${id}', {
         method: "PUT",
         headers: {
           "Content-Type": "application"
