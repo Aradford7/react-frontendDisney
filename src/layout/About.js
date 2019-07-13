@@ -1,8 +1,5 @@
 import React from "react";
 import Footer from "./Footer/Footer";
-import Parallax from "./Parallax/Parallax";
-import Button from "react-bootstrap/Button";
-import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import {Container, Row, Col} from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
