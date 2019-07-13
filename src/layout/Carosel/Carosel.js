@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button'
 export const Carosel= () =>(
     <div>
        <Carousel>
+         
   <Carousel.Item >
     <img
       className="d-block w-100"
