@@ -7,7 +7,7 @@
 * Users can create, see, and delete their trips .
 * Users can also update their profile.
 
-## Demo our site here: url
+## Demo our site here: https://radiant-everglades-42616.herokuapp.com/
 
  Preview: ![preview](https://i.imgur.com/W2PcFo1.jpg)
 
