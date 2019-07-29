@@ -9,7 +9,7 @@
 
 ## Demo our site here: url
 
- Preview: ![preview]()
+ Preview: ![preview](https://i.imgur.com/W2PcFo1.jpg)
 
 ## Plans and Wireframing
  Our Wireframe
